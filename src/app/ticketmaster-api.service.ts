@@ -29,9 +29,8 @@ export class TicketmasterApiService {
   }
 
   getArt() {
-    let artUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=music&city=${this.city}`
+    let artUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=art&city=${this.city}`
     return this.http.get(artUrl);
   }
 
-  
 }
