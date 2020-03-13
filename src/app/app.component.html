@@ -1,9 +1,28 @@
-<<<<<<< HEAD
-<h1>Stumble</h1>
 <div class="top-nav">
   <img class="logo" src="./assets/stumble.png" alt="logo" />
 </div>
-=======
-<h1>Main Page</h1>
+<h3>Welcome to Stumble</h3>
+
+<!-- Search Input Field  -->
+<section class="search-fields">
+  <div class="search-bar-container">
+    <h4>Search for events below!</h4>
+    <input [(ngModel)]="textSearch" type="text" placeholder="Search Family Events Here" class="search-bar" />
+
+    <button class="search-btn" (click)="onSearch()">
+      Search
+    </button>
+  </div>
+</section>
+<!-- Search Input Field -->
+
+<section>
+  <div class="randDataBox">
+    <div class="randData" *ngFor="let events of sportsEvents">
+      <p>Event: {{events['name']}}</p>
+      <img class="event-img" src="{{events['images'][8]['url']}}">
+      <a href="{{events['url']}}">Book Event</a><br>
+    </div>
+  </div>
+</section>
 <router-outlet></router-outlet>
->>>>>>> 2a7396c7c2fe8429ef168264d87d31634efe1264
