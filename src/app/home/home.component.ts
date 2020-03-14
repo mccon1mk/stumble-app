@@ -30,13 +30,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     // First 4 is just for logging. We can disable it
-    this.__TicketmasterApiService.getSports().subscribe(sports => console.log(sports['_embedded']['events']))
+    //this.__TicketmasterApiService.getSports().subscribe(sports => console.log(sports['_embedded']['events']))
     // this.__TicketmasterApiService.getFamily().subscribe(family => console.log(family['_embedded']['events']))
     // this.__TicketmasterApiService.getMusic().subscribe(music => console.log(music['_embedded']['events']))
     // this.__TicketmasterApiService.getArt().subscribe(art => console.log(art['_embedded']['events']))
 
     // Below 4 lines to get the data back to the html
-    this.__TicketmasterApiService.getSports().subscribe(sports => this.sportsEvents = sports['_embedded']['events'])
+    this.__TicketmasterApiService.getSports().subscribe(sports => {
+      this.sportsEvents = sports['_embedded']['events'];
+      console.log (this.sportsEvents);
+  })
+    
 
     // this.__TicketmasterApiService.getFamily().subscribe(family =>this.familyEvents = family['_embedded']['events'])
     // this.__TicketmasterApiService.getMusic().subscribe(music =>this.musicEvents = music['_embedded']['events'])
