@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TicketmasterApiService } from './ticketmaster-api.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,7 +22,7 @@ export class AppComponent {
   ngOnInit() {
     // Below 4 lines to get the data back to the html
     // this.__TicketmasterApiService.getSports().subscribe(sports => this.sportsEvents = sports['_embedded']['events'])
-    this.__TicketmasterApiService.getFamily().subscribe(family =>this.familyEvents = family['_embedded']['events'])
+    this.__TicketmasterApiService.getFamily().subscribe(family => this.familyEvents = family['_embedded']['events'])
     // this.__TicketmasterApiService.getMusic().subscribe(music =>this.musicEvents = music['_embedded']['events'])
     // this.__TicketmasterApiService.getArt().subscribe(art =>this.artEvents = art['_embedded']['events'])
   }
@@ -33,5 +34,6 @@ export class AppComponent {
   //   this.__TicketmasterApiService.getMusic(textSearch).subscribe(music =>this.musicEvents = music['_embedded']['events'])
   //   this.__TicketmasterApiService.getArt(textSearch).subscribe(art =>this.artEvents = art['_embedded']['events'])
   // }
+
 
 }
