@@ -1,69 +1,12 @@
+<nav>
+  <a routerLink="Home" >Home</a>
+  <a routerLink="bucket-list" >bucket-list</a>
+</nav>
+
 <div class="top-nav">
   <img class="logo" src="./assets/stumble.png" alt="logo" />
 </div>
 <h3>Welcome to Stumble</h3>
-
-
-<!-- Search Input Field  -->
-<section class="search-fields">
-  <div class="search-bar-container">
-    <h4>Search City Events</h4>
-    <input [(ngModel)]="textSearch" type="text" placeholder="Search for Events in a City" class="search-bar" />
-
-    <button class="search-btn" (click)="onSearch(textSearch)">
-      Search
-    </button>
-  </div>
-</section>
-<!-- Search Input Field -->
-
-
-<!-- Sport Events -->
-<!-- <section>
-s
-<!-- Sport Events -->
-
-<!-- Family Events -->
-<!-- <section>
-  <div class="randDataBox">
-    <div class="randData" *ngFor="let event of familyEvents">
-      <p>Event: {{event['name']}}</p>
-      <img class="event-img" src="{{event['images'][8]['url']}}">
-      <a href="{{event['url']}}">Book Event</a><br>
-    </div>
-  </div>
-</section> -->
-<!-- Family Events -->
-
-
-<!-- getMusic Events -->
-<!-- <section>
-  <div class="randDataBox">
-    <div class="randData" *ngFor="let event of musicEvents">
-      <p>Event: {{event['name']}}</p>
-      <img class="event-img" src="{{event['images'][8]['url']}}">
-      <a href="{{event['url']}}">Book Event</a><br>
-    </div>
-  </div>
-</section> -->
-<!-- getMusic Events -->
-
-
-<!-- getArt Events -->
-<!-- <section>
-  <div class="randDataBox">
-    <div class="randData" *ngFor="let event of artEvents">
-      <p>Event: {{event['name']}}</p>
-      <img class="event-img" src="{{event['images'][8]['url']}}">
-      <a href="{{event['url']}}">Book Event</a><br>
-    </div>
-  </div>
-</section> -->
-<!-- getArt Events -->
-
-
-
-
 
 
 <router-outlet></router-outlet>

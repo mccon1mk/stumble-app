@@ -1,22 +1,73 @@
 <!-- Search Input Field  -->
 <section class="search-fields">
-    <div class="search-bar-container">
-      <h4>Search for events below!</h4>
-      <input [(ngModel)]="textSearch" type="text" placeholder="Search Family Events Here" class="search-bar" />
-  
-      <button class="search-btn" (click)="onSearch()">
-        Search
-      </button>
+  <div class="search-bar-container">
+    <h4>Search City Events</h4>
+    <input [(ngModel)]="textSearch" type="text" placeholder="Search for Events in a City" class="search-bar" />
+
+    <button class="search-btn" (click)="onSearch(textSearch)">
+      Search
+    </button>
+  </div>
+</section>
+<!-- Search Input Field -->
+
+
+
+<!-- Sport Events -->
+<section>
+  <div class="randDataBox">
+    <div class="randData" *ngFor="let event of sportsEvents">
+      <p>Event: {{event['name']}}</p>
+      <img class="event-img" src="{{event['images'][8]['url']}}">
+      <a href="{{event['url']}}">Book Event</a><br>
     </div>
-  </section>
-  <!-- Search Input Field -->
-  
-  <section>
-    <div class="randDataBox">
-      <div class="randData" *ngFor="let events of sportsEvents">
-        <p>Event: {{events['name']}}</p>
-        <img class="event-img" src="{{events['images'][8]['url']}}">
-        <a href="{{events['url']}}">Book Event</a><br>
-      </div>
+  </div>
+</section>
+<!-- Sport Events -->
+
+
+
+<!-- Family Events -->
+<section>
+  <div class="randDataBox">
+    <div class="randData" *ngFor="let event of familyEvents">
+      <p>Event: {{event['name']}}</p>
+      <img class="event-img" src="{{event['images'][8]['url']}}">
+      <a href="{{event['url']}}">Book Event</a><br>
     </div>
-  </section>
+  </div>
+</section>
+<!-- Family Events -->
+
+
+<!-- getMusic Events -->
+<section>
+  <div class="randDataBox">
+    <div class="randData" *ngFor="let event of musicEvents">
+      <p>Event: {{event['name']}}</p>
+      <img class="event-img" src="{{event['images'][8]['url']}}">
+      <a href="{{event['url']}}">Book Event</a><br>
+    </div>
+  </div>
+</section>
+<!-- getMusic Events -->
+
+
+<!-- getArt Events -->
+<section>
+  <div class="randDataBox">
+    <div class="randData" *ngFor="let event of artEvents">
+      <p>Event: {{event['name']}}</p>
+      <img class="event-img" src="{{event['images'][8]['url']}}">
+      <a href="{{event['url']}}">Book Event</a><br>
+    </div>
+  </div>
+</section>
+<!-- getArt Events -->
+
+
+
+
+
+
+

@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path: 'bucket-list', component: BucketListComponent},
+  {path: 'Home', component: HomeComponent},
   {path: '**', component: HomeComponent}
 ];
 
