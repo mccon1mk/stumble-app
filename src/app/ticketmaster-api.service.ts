@@ -8,35 +8,33 @@ import { credentials } from './apikey';
 
 export class TicketmasterApiService {
 
+  
   constructor(private http: HttpClient) { }
 
+  public city;
+  public baseUrl = 'https://app.ticketmaster.com/discovery/v2/events.json'
 
-  public city = 'detroit';
-
-
-  getSports() {
-    let sportsUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=sports&city=${this.city}`
+  getSports(textSearch =  'detroit') {
+    this.city = textSearch
+    let sportsUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&keyword=sports&city=${this.city}`
     return this.http.get(sportsUrl);
   }
 
-  // getFamily() {
-  //   let familyUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=family&city=${this.city}`
-  //   return this.http.get(familyUrl);
-  // }
-
-  // getMusic() {
-  //   let musicUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=music&city=${this.city}`
-  //   return this.http.get(musicUrl);
-  // }
-
-  // getArt() {
-  //   let artUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=art&city=${this.city}`
-  //   return this.http.get(artUrl);
-  // }
-
-  userSearch(searchTerm) {
-    let searchUrl = `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=${credentials.apiKey}&keyword=${searchTerm}`;
-    return this.http.get(searchUrl);
+  getFamily(textSearch  =  'detroit') {
+    this.city = textSearch
+    let familyUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&keyword=family&city=${this.city}`
+    return this.http.get(familyUrl);
   }
 
+  getMusic(textSearch  =  'detroit') {
+    this.city = textSearch
+    let musicUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&keyword=music&city=${this.city}`
+    return this.http.get(musicUrl);
+  }
+
+  getArt(textSearch =  'detroit') {
+    this.city = textSearch
+    let artUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&keyword=art&city=${this.city}`
+    return this.http.get(artUrl);
+  }
 }
