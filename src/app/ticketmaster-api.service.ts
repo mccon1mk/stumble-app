@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { credentials } from './apikey';
-import { Observable } from 'rxjs/Observable';
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 
 export class TicketmasterApiService {
 
-  favorites:Observable<any>; 
+  favorites = [];
 
   constructor(private http: HttpClient) { }
 
@@ -42,7 +42,8 @@ export class TicketmasterApiService {
     return this.http.get(searchUrl);
   }
 
-  addFavorites(id) {
-    console.log(id);
-    this.favorites.push(id);
+  addFavorites(event) {
+    console.log(event);
+    this.favorites.push(event);
+  } 
 }
