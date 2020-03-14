@@ -18,13 +18,23 @@
 <!-- Search Input Field -->
 
 
+
 <!-- Sport Events -->
-<!-- <section>
-s
+<section>
+  <div class="randDataBox">
+    <div class="randData" *ngFor="let event of sportsEvents">
+      <p>Event: {{event['name']}}</p>
+      <img class="event-img" src="{{event['images'][8]['url']}}">
+      <a href="{{event['url']}}">Book Event</a><br>
+    </div>
+  </div>
+</section>
 <!-- Sport Events -->
 
+
+
 <!-- Family Events -->
-<!-- <section>
+<section>
   <div class="randDataBox">
     <div class="randData" *ngFor="let event of familyEvents">
       <p>Event: {{event['name']}}</p>
@@ -32,12 +42,12 @@ s
       <a href="{{event['url']}}">Book Event</a><br>
     </div>
   </div>
-</section> -->
+</section>
 <!-- Family Events -->
 
 
 <!-- getMusic Events -->
-<!-- <section>
+<section>
   <div class="randDataBox">
     <div class="randData" *ngFor="let event of musicEvents">
       <p>Event: {{event['name']}}</p>
@@ -45,12 +55,12 @@ s
       <a href="{{event['url']}}">Book Event</a><br>
     </div>
   </div>
-</section> -->
+</section>
 <!-- getMusic Events -->
 
 
 <!-- getArt Events -->
-<!-- <section>
+<section>
   <div class="randDataBox">
     <div class="randData" *ngFor="let event of artEvents">
       <p>Event: {{event['name']}}</p>
@@ -58,7 +68,7 @@ s
       <a href="{{event['url']}}">Book Event</a><br>
     </div>
   </div>
-</section> -->
+</section>
 <!-- getArt Events -->
 
 
