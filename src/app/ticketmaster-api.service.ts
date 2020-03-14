@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { credentials } from './apikey';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class TicketmasterApiService {
+
+  favorites:Observable<any>; 
 
   constructor(private http: HttpClient) { }
 
@@ -39,4 +42,7 @@ export class TicketmasterApiService {
     return this.http.get(searchUrl);
   }
 
+  addFavorites(id) {
+    console.log(id);
+    this.favorites.push(id);
 }

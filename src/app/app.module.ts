@@ -4,10 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { BucketListComponent } from './bucket-list/bucket-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BucketListComponent
   ],
   imports: [
     BrowserModule,
