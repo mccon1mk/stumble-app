@@ -9,7 +9,9 @@ import { credentials } from './apikey';
 
 export class TicketmasterApiService {
 
-  favorites = [];
+  private _favorites = [];
+
+
 
   constructor(private http: HttpClient) { }
 
@@ -43,7 +45,13 @@ export class TicketmasterApiService {
   }
 
   addFavorites(event) {
+  
     console.log(event);
-    this.favorites.push(event);
+    this._favorites.push(event);
+    console.log ("Service Favorite Count: " +   this._favorites.length);
   } 
+
+  get favorites() {
+    return this._favorites
+  }
 }

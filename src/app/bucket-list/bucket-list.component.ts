@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TicketmasterApiService } from '../ticketmaster-api.service';
 
 @Component({
   selector: 'app-bucket-list',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BucketListComponent implements OnInit {
 
-  constructor() { }
+  public blEvents: any[];
+
+  constructor(private __TicketmasterApiService: TicketmasterApiService) {
+    
+   }
 
   ngOnInit() {
+
+   this.blEvents = this.__TicketmasterApiService.favorites;
+   console.log ("Service Favorite Count: " +   this.__TicketmasterApiService.favorites.length);
+   console.log ("Bucket List Event Count: " + this.blEvents.length);
   }
 
 }

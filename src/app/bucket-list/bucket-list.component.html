@@ -1,1 +1,10 @@
 <p>bucket-list works!</p>
+<section>
+    <div class="randDataBox">
+      <div class="randData" *ngFor="let event of __TicketmasterApiService.favorites">
+        <p>Event: {{event['name']}}</p>
+        <img class="event-img" src="{{event['images'][1]['url']}}">
+        <a href="{{event['url']}}">Book Event</a><br>
+      </div>
+    </div>
+  </section>
