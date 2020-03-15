@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { credentials } from './apikey';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,53 +15,54 @@ export class TicketmasterApiService {
 
   constructor(private http: HttpClient) { }
 
+  public city;
+  public baseUrl = 'https://app.ticketmaster.com/discovery/v2/events.json'
 
-  public city = 'detroit';
 
 
-  getSports() {
-    let sportsUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=sports&city=${this.city}`
-    return this.http.get(sportsUrl);
+  getSports(textSearch = 'detroit'): Observable<any> {
+    this.city = textSearch
+    let sportsUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=5&keyword=sports&city=${this.city}`
+    return this.http.get<any>(sportsUrl);
   }
 
-  // getFamily() {
-  //   let familyUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=family&city=${this.city}`
-  //   return this.http.get(familyUrl);
-  // }
+  getFamily(textSearch = 'detroit'): Observable<any> {
+    this.city = textSearch
+    let familyUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=5&keyword=family&city=${this.city}`
+    return this.http.get<any>(familyUrl);
+  }
 
-  // getMusic() {
-  //   let musicUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=music&city=${this.city}`
-  //   return this.http.get(musicUrl);
-  // }
+  getMusic(textSearch = 'detroit'): Observable<any> {
+    this.city = textSearch
+    let musicUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=5&keyword=music&city=${this.city}`
+    return this.http.get<any>(musicUrl);
+  }
 
-  // getArt() {
-  //   let artUrl = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=art&city=${this.city}`
-  //   return this.http.get(artUrl);
-  // }
-
-  userSearch(searchTerm) {
-    let searchUrl = `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=${credentials.apiKey}&keyword=${searchTerm}`;
-    return this.http.get(searchUrl);
+  getArt(textSearch = 'detroit'): Observable<any> {
+    this.city = textSearch
+    let artUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=5&keyword=art&city=${this.city}`
+    return this.http.get<any>(artUrl);
   }
 
   addFavorites(event) {
-  
+
     console.log(event);
     this._favorites.push(event);
-    console.log ("Service Favorite Count: " +   this._favorites.length);
-  } 
+    console.log("Service Favorite Count: " + this._favorites.length);
+  }
 
   removeFavorites(event) {
-  
+
     let indx = -1;
     indx = this._favorites.indexOf(event);
-    if(indx > -1) {
-    this._favorites.splice(indx, 1);
+    if (indx > -1) {
+      this._favorites.splice(indx, 1);
     }
-    console.log ("Service Favorite Count: " +   this._favorites.length);
-  } 
+    console.log("Service Favorite Count: " + this._favorites.length);
+  }
 
   get favorites() {
     return this._favorites
   }
+}
 }
