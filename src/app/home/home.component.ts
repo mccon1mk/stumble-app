@@ -6,6 +6,7 @@ import { TicketmasterApiService } from '../ticketmaster-api.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   public sportsEvents;
   public familyEvents;
@@ -37,6 +38,7 @@ export class HomeComponent implements OnInit {
     this.__TicketmasterApiService.getSports(textSearch).subscribe(sports => this.sportsEvents = sports['_embedded']['events'])
     setTimeout(() => {  this.__TicketmasterApiService.getFamily(textSearch).subscribe(family => { this.familyEvents = family['_embedded']['events']})}, 1000);
     setTimeout(() => {  this.__TicketmasterApiService.getMusic(textSearch).subscribe(music =>  { this.musicEvents = music['_embedded']['events']})}, 2000);
-    setTimeout(() => {  this.__TicketmasterApiService.getMusic(textSearch).subscribe(art =>  { this.artEvents = art['_embedded']['events']})}, 1000)
+    setTimeout(() => {  this.__TicketmasterApiService.getMusic(textSearch).subscribe(art =>  { this.artEvents = art['_embedded']['events']})}, 2000)
   }
+
 }
