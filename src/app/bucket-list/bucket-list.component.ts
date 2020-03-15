@@ -10,8 +10,8 @@ export class BucketListComponent implements OnInit {
 
   public blEvents: any[];
 
-  constructor(private __TicketmasterApiService: TicketmasterApiService) {
-    
+  constructor(public __TicketmasterApiService: TicketmasterApiService) {
+ 
    }
 
   ngOnInit() {

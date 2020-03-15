@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { credentials } from './apikey';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -48,6 +47,16 @@ export class TicketmasterApiService {
   
     console.log(event);
     this._favorites.push(event);
+    console.log ("Service Favorite Count: " +   this._favorites.length);
+  } 
+
+  removeFavorites(event) {
+  
+    let indx = -1;
+    indx = this._favorites.indexOf(event);
+    if(indx > -1) {
+    this._favorites.splice(indx, 1);
+    }
     console.log ("Service Favorite Count: " +   this._favorites.length);
   } 
 

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
 
 
-  constructor(private __TicketmasterApiService: TicketmasterApiService) { }
+  constructor(public __TicketmasterApiService: TicketmasterApiService) { }
 
 
   userSearch = {
