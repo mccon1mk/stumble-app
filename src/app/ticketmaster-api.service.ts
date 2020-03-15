@@ -65,4 +65,3 @@ export class TicketmasterApiService {
     return this._favorites
   }
 }
-}

@@ -9,8 +9,17 @@
     </button>
   </div>
 </section>
-<!-- Search Input Field -->
 
+
+<!-- Sport Events -->
+<!-- <section>
+<div class="randDataBox">
+  <div class="randData" *ngFor="let event of sportsEvents">
+    <p>Event: {{event['name']}}</p>
+    <img class="event-img" src="{{event['images'][8]['url']}}">
+    <a href="{{event['url']}}">Book Event</a><br>
+  </div>
+</section> -->
 
 
 <!-- Sport Events -->
@@ -18,26 +27,10 @@
   <div class="randDataBox">
     <div class="randData" *ngFor="let event of sportsEvents">
       <p>Event: {{event['name']}}</p>
-      <img class="event-img" src="{{event['images'][8]['url']}}">
+      <img class="event-img" src="{{event['images'][1]['url']}}">
       <a href="{{event['url']}}">Book Event</a><br>
     </div>
-<<<<<<< HEAD
-  </section>
-
-  <a href="bucket-list">Bucket List</a>
-  <!-- Search Input Field -->
-  
-  <section>
-    <div class="randDataBox">
-      <div class="randData" *ngFor="let event of sportsEvents">
-        <p>Event: {{event['name']}}</p>
-        <img class="event-img" src="{{event['images'][1]['url']}}">
-        <a href="{{event['url']}}">Book Event</a><br>
-        <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i id="thumbsUpIcon" class="thumbsUpIcon">Thumbs Up</i></button>
-        <button class="favorites" (click)="this.__TicketmasterApiService.removeFavorites(event)"><i id="thumbsDownIcon" class="thumbsDownIcon">Thumbs Down</i></button>
-      </div>
-=======
-  </div>
+</div>
 </section>
 <!-- Sport Events -->
 
@@ -50,7 +43,6 @@
       <p>Event: {{event['name']}}</p>
       <img class="event-img" src="{{event['images'][8]['url']}}">
       <a href="{{event['url']}}">Book Event</a><br>
->>>>>>> origin/master
     </div>
   </div>
 </section>
@@ -85,6 +77,6 @@
 
 
 
-
-
-
+<!-- Search Input Field -->
+<button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i id="thumbsUpIcon" class="thumbsUpIcon">Thumbs Up</i></button>
+<button class="favorites" (click)="this.__TicketmasterApiService.removeFavorites(event)"><i id="thumbsDownIcon" class="thumbsDownIcon">Thumbs Down</i></button>
