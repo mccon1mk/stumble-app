@@ -12,17 +12,6 @@
 
 
 <!-- Sport Events -->
-<!-- <section>
-<div class="randDataBox">
-  <div class="randData" *ngFor="let event of sportsEvents">
-    <p>Event: {{event['name']}}</p>
-    <img class="event-img" src="{{event['images'][8]['url']}}">
-    <a href="{{event['url']}}">Book Event</a><br>
-  </div>
-</section> -->
-
-
-<!-- Sport Events -->
 <section>
   <div class="randDataBox">
     <div class="randData" *ngFor="let event of sportsEvents">
@@ -74,9 +63,16 @@
 </section>
 <!-- getArt Events -->
 
-
-
-
-<!-- Search Input Field -->
-<button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i id="thumbsUpIcon" class="thumbsUpIcon">Thumbs Up</i></button>
-<button class="favorites" (click)="this.__TicketmasterApiService.removeFavorites(event)"><i id="thumbsDownIcon" class="thumbsDownIcon">Thumbs Down</i></button>
+  <!-- Search Input Field -->
+  
+  <section>
+    <div class="randDataBox">
+      <div class="randData" *ngFor="let event of sportsEvents">
+        <p>Event: {{event['name']}}</p>
+        <img class="event-img" src="{{event['images'][1]['url']}}">
+        <a href="{{event['url']}}">Book Event</a><br>
+        <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i id="thumbsUpIcon" class="thumbsUpIcon">Thumbs Up</i></button>
+        <button class="favorites" (click)="this.__TicketmasterApiService.removeFavorites(event)"><i id="thumbsDownIcon" class="thumbsDownIcon">Thumbs Down</i></button>
+      </div>
+    </div>
+  </section>
