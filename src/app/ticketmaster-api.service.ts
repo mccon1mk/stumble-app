@@ -22,25 +22,25 @@ export class TicketmasterApiService {
 
   getSports(textSearch = 'detroit'): Observable<any> {
     this.city = textSearch
-    let sportsUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=5&keyword=sports&city=${this.city}`
+    let sportsUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=20&keyword=sports&city=${this.city}`
     return this.http.get<any>(sportsUrl);
   }
 
   getFamily(textSearch = 'detroit'): Observable<any> {
     this.city = textSearch
-    let familyUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=5&keyword=family&city=${this.city}`
+    let familyUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=20&keyword=family&city=${this.city}`
     return this.http.get<any>(familyUrl);
   }
 
   getMusic(textSearch = 'detroit'): Observable<any> {
     this.city = textSearch
-    let musicUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=5&keyword=music&city=${this.city}`
+    let musicUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=20&keyword=music&city=${this.city}`
     return this.http.get<any>(musicUrl);
   }
 
   getArt(textSearch = 'detroit'): Observable<any> {
     this.city = textSearch
-    let artUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=5&keyword=art&city=${this.city}`
+    let artUrl = `${this.baseUrl}?apikey=${credentials.apiKey}&size=20&keyword=art&city=${this.city}`
     return this.http.get<any>(artUrl);
   }
 
