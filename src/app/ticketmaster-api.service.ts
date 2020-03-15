@@ -40,7 +40,7 @@ export class TicketmasterApiService {
     return this.http.get(artUrl);
   }
 }
-addFavorites(event) {
-  console.log(event);
-  this.favorites.push(event);
-} 
+// addFavorites(event) {
+//   console.log(event);
+//   this.favorites.push(event);
+// } 
