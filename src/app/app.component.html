@@ -1,19 +1,13 @@
+<nav>
+  <a routerLink="Home">Home</a>
+  <a routerLink="bucket-list">Bucket List</a>
+</nav>
+
 <div class="top-nav">
   <img class="logo" src="./assets/stumble.png" alt="logo" />
 </div>
 
-<!-- Search Input Field  -->
-<section class="search-fields">
-  <div class="search-bar-container">
-    <h4>Search for events below!</h4>
-    <input [(ngModel)]="textSearch" type="text" placeholder="Search Family Events Here" class="search-bar" />
 
-    <button class="search-btn" (click)="onSearch()">
-      Search
-    </button>
-  </div>
-</section>
-<!-- Search Input Field -->
 
 <section>
   <div class="randDataBox">
