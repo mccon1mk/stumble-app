@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class TicketmasterApiService {
 
   private _favorites = [];
+  SportsArr = [];
 
 
 

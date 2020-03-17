@@ -1,3 +1,27 @@
+.favorites {
+ border: none;
+}
+
+.fas {
+  font-size: 30px;
+  cursor: pointer;
+  color: #66b4ff;
+  user-select: none;
+}
+
+.e-data {
+  position: absolute;
+
+  width: 200px;
+  height: 300px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 5px
+}
+
 .event-cards {
   display: flex;
   margin: 5%;
@@ -28,63 +52,25 @@
   flex-direction: column;
 }
 
-.container {
-  display: flex;
-  /* align-items: center;
-  flex-wrap: wrap; */
 
-  /* flex-direction: column; */
-}
 
-.main {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-
-  height: 100%;
-  width: 100%;
-  position: relative;
-  /* background-color: ghostwhite;
-  border: 1px solid grey; */
-}
-
-.event-img {
+/* .event-img {
   display: flex;
   width: 200px;
   height: 300px;
   border: 1px solid lightgrey;
-  position: absolute;
   top: 40px;
   left: 40px;
   background-color: #fff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
-  border-radius: 3px;
+  border-radius: 3px; */
   /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pizza_Hut_1967-1999_logo.svg/1200px-Pizza_Hut_1967-1999_logo.svg.png'); */
-  background-size: contain;
+  /* background-size: contain;
   background-repeat: no-repeat;
-;}
+} */
 
-.card2 {
-  display: flex;
-  transform: translate(-5px, -5px);
-}
 
-.card3 {
-  display: flex;
-  transform: translate(-10px, -10px);
-}
-
-.card4 {
-  display: flex;
-  transform: translate(-15px, -15px);
-}
-
-.card5 {
-  display: flex;
-  transform: translate(-20px, -20px);
-}
-
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .logo {
     width: 35%;
     height: 35%;
