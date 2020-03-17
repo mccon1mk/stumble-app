@@ -1,12 +1,15 @@
 <!-- Search Input Field  -->
 <section class="search-fields">
   <div class="search-bar-container">
-    <h4>Search City Events</h4>
-    <input [(ngModel)]="textSearch" type="text" placeholder="Search for Events in a City" class="search-bar" />
+    <h4>Search For Events Nearby!</h4>
+    <input [(ngModel)]="textSearch" type="text" placeholder="Type in city here" class="search-bar" />
 
     <button class="search-btn" (click)="onSearch(textSearch)">
       Search
     </button>
+    <p>
+      Click the thumbs up icon to save the event to your bucket list!
+    </p>
   </div>
 </section>
 
@@ -15,8 +18,10 @@
 <section class="sports-events-section">
   <div class="event-cards">
     <div class="event-data" *ngFor="let event of sportsEvents">
-      <p>Event: {{event['name']}}</p>
+      <p>{{event['name']}}</p>
       <img class="event-img" src="{{event['images'][1]['url']}}">
+      <p>Date: {{event.dates.start.localDate}}</p>
+      <p>Location: {{event._embedded.venues[0].city.name}}</p>
       <a href="{{event['url']}}">Book Event</a><br>
       <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i id="thumbsUpIcon"
           class="thumbsUpIcon">Thumbs Up</i></button>
@@ -37,6 +42,8 @@
     <div class="event-data" *ngFor="let event of familyEvents">
       <p>Event: {{event['name']}}</p>
       <img class="event-img" src="{{event['images'][8]['url']}}">
+      <p>Date: {{event.dates.start.localDate}}</p>
+      <p>Location: {{event._embedded.venues[0].city.name}}</p>
       <a href="{{event['url']}}">Book Event</a><br>
       <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i id="thumbsUpIcon"
           class="thumbsUpIcon">Thumbs Up</i></button>
@@ -54,6 +61,8 @@
     <div class="event-data" *ngFor="let event of musicEvents">
       <p>Event: {{event['name']}}</p>
       <img class="event-img" src="{{event['images'][8]['url']}}">
+      <p>Date: {{event.dates.start.localDate}}</p>
+      <p>Location: {{event._embedded.venues[0].city.name}}</p>
       <a href="{{event['url']}}">Book Event</a><br>
       <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i id="thumbsUpIcon"
           class="thumbsUpIcon">Thumbs Up</i></button>
@@ -71,6 +80,8 @@
     <div class="event-data" *ngFor="let event of artEvents">
       <p>Event: {{event['name']}}</p>
       <img class="event-img" src="{{event['images'][8]['url']}}">
+      <p>Date: {{event.dates.start.localDate}}</p>
+      <p>Location: {{event._embedded.venues[0].city.name}}</p>
       <a href="{{event['url']}}">Book Event</a><br>
       <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i id="thumbsUpIcon"
           class="thumbsUpIcon">Thumbs Up</i></button>
