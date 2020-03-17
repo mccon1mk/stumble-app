@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
   delete(event) {
-    this.sportsEvents.splice(event);
+    this.sportsEvents.splice(event, 1);
   }
 
 }
