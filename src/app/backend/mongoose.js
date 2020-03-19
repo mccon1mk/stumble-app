@@ -9,10 +9,20 @@ const options = {
   useCreateIndex: true
 }
 
+const EventModel = {
+  name: String,
+  image: String,
+  localDate: Date,
+  city: String,
+  url: String
+}
+
+
 const db = {};
 db.mongoose = mongoose;
 db.url = CURL;
 db.options = options;
-// db.tutorials = require("./events.model.js")(mongoose);
+db.events = EventModel;
 
-module.exports = db;
+
+module.exports = db

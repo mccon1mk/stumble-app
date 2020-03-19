@@ -1,23 +1,26 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+const route = require('./routes')
 const app = express();
+
+
 
 var corsOptions = {
   origin: "http://localhost:3000"
 };
-
 app.use(cors(corsOptions));
-
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
-
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-const db = require("./mongoose.js")
+
+
+// Require mongoose model/Schema/Connection
+const db = require("./mongoose");
+// Connect to db through mongoose
 db.mongoose.connect(db.url, db.options).then(() => {
   console.log("Connected to the database!");
 })
@@ -28,10 +31,8 @@ db.mongoose.connect(db.url, db.options).then(() => {
 
 
 
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
-});
-
+// Use the routes defined in routes.js
+app.use("/", route);
 
 
 const PORT = 3000
