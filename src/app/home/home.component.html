@@ -1,19 +1,9 @@
 <!-- Search Input Field  -->
-<section class="search-fields">
-  <div class="search-bar-container">
-    <h4>Search For Events Nearby!</h4>
-    <input [(ngModel)]="textSearch" type="text" placeholder="Type in city here" class="search-bar" />
-
-    <button class="search-btn" (click)="onSearch(textSearch)">
-      Search
-    </button>
-    <p>
-      Click the thumbs up icon to save the event to your bucket list!
-    </p>
-  </div>
-  <p>
-    Search events in a certain city and add them to your bucket list
-  </p>
+<section class="search-bar-container">
+  <h2>Search For Events Nearby!</h2>
+  <input [(ngModel)]="textSearch" type="text" placeholder="Type in city here" class="search-bar" />
+  <button class="search-btn" (click)="onSearch(textSearch)">Submit</button>
+  <p>Click the thumbs up icon to save the event to your bucket list!</p>
 </section>
 
 <!-- Sports Card -->
