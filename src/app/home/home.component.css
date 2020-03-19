@@ -1,11 +1,13 @@
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+}
 
 .favorites {
  border: none;
- display: flex; 
- flex-direction: column;
- justify-content: space-around;
- align-content: space-around;
-
+ padding: 20px;
 }
 
 .fas {
@@ -13,6 +15,10 @@
   cursor: pointer;
   color: #66b4ff;
   user-select: none;
+}
+
+.fas:hover {
+  color: #b3daff;
 }
 
 .e-data {
