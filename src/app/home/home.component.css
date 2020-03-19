@@ -1,3 +1,17 @@
+.sports-container {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  background-color: bisque;
+  overflow: scroll;
+}
+
+.card {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+}
 
 .favorites {
  border: none;
@@ -7,6 +21,7 @@
  align-content: space-around;
 
 }
+
 
 .fas {
   font-size: 30px;
@@ -59,8 +74,8 @@
   margin-right: auto;
   margin-bottom: 10px; */
 
-  box-sizing: border-box;
-  width: 100%;
+  /* box-sizing: border-box; */
+  width: 100px;
 
 }
 
