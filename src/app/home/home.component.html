@@ -13,13 +13,19 @@
   </div>
 </section>
 
+<div class="category-div">
+  <section class="sports-container">
+    <div class="e-data card" [ngStyle]="{
+      'top': (i * -5) + 'px',
+      'left': (i * -5) + 'px'
 
-<section class="sports-container">
-  <div class="e-data card" [ngStyle]="{ 'transform': 'translate(' + (i * 50) + 'px)' }" *ngFor="let event of sportsEvents; let i = index">
-    <!-- <p>{{event['name']}}</p> -->
-    <img class="event-img {{i}}" src="{{event['images'][1]['url']}}">
-  </div>
-</section>
+      
+      }" *ngFor="let event of sportsEvents; let i = index">
+      <!-- <p>{{event['name']}}</p> -->
+      <img class="event-img {{i}}" src="{{event['images'][1]['url']}}">
+    </div>
+  </section>
+</div>
 
 <!-- Sports Card -->
 <!-- <section class="sports-container">
@@ -56,7 +62,7 @@
 <!-- getSports Events-->
 
 <!-- getFamily Events -->
-<section class="family-events-section">
+<!-- <section class="family-events-section">
   <div class="event-cards">
     <div class="event-data" *ngFor="let event of familyEvents">
       <p>Event: {{event['name']}}</p>
@@ -70,11 +76,11 @@
           class="thumbsDownIcon">Thumbs Down</i></button>
     </div>
   </div>
-</section>
+</section> -->
 <!-- getFamily Events -->
 
 <!-- getMusic Events -->
-<section class="music-events-section">
+<!-- <section class="music-events-section">
   <div class="event-cards">
     <div class="event-data" *ngFor="let event of musicEvents">
       <p>Event: {{event['name']}}</p>
@@ -88,11 +94,11 @@
           class="thumbsDownIcon">Thumbs Down</i></button>
     </div>
   </div>
-</section>
+</section> -->
 <!-- getMusic Events -->
 
 <!-- getArt Events -->
-<section class="art-events-section">
+<!-- <section class="art-events-section">
   <div class="event-cards">
     <div class="event-data" *ngFor="let event of artEvents">
       <p>Event: {{event['name']}}</p>
@@ -106,5 +112,5 @@
           class="thumbsDownIcon">Thumbs Down</i></button>
     </div>
   </div>
-</section>
+</section> -->
 <!-- getArt Events -->
