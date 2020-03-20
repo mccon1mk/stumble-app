@@ -32,5 +32,15 @@ route.post("/", (req, res) => {
   })
 })
 
+route.get("/", (req, res) => {
+  Events.find({}).then((data) => {
+    res.send(data)
+  }).catch((err) => {
+    resp.status(500).send(err)
+    // console.log(err)
+  })
+})
+
+
 
 module.exports = route;
