@@ -118,8 +118,17 @@
               "devServerTarget": "stumble-app-final-project:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/stumble-app-final-project",
+            "netlifyToken": "",
+            "siteId": ""
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "stumble-app-final-project"
 }

@@ -1,42 +1,23 @@
 <!-- Search Input Field  -->
-<section class="search-fields">
-  <div class="search-bar-container">
-    <h4>Search For Events Nearby!</h4>
-    <input
-      [(ngModel)]="textSearch"
-      type="text"
-      placeholder="Type in city here"
-      class="search-bar"
-    />
-
-    <button class="search-btn" (click)="onSearch(textSearch)">
-      Search
-    </button>
-    <p>
-      Click the thumbs up icon to save the event to your bucket list!
-    </p>
-  </div>
+<section class="search-bar-container">
+  <h2>Search For Events Nearby!</h2>
+  <input [(ngModel)]="textSearch" type="text" placeholder="Type in city here" class="search-bar" />
+  <button class="search-btn" (click)="onSearch(textSearch)">Submit</button>
+  <p>Click the thumbs up icon to save the event to your bucket list!</p>
 </section>
 
 <div class="category-div">
-  <section
-    class="sports-container"
-    [ngStyle]="{
+  <section class="sports-container" [ngStyle]="{
       top: i * -5 + 'px',
       left: i * -5 + 'px'
-    }"
-    *ngFor="let event of sportsEvents; let i = index"
-  >
+    }" *ngFor="let event of sportsEvents; let i = index">
     <div class="e-data card" *ngIf="i < 5">
       <p>{{ event["name"] }}</p>
       <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
       <p>Date: {{ event.dates.start.localDate }}</p>
       <p>Location: {{ event._embedded.venues[0].city.name }}</p>
       <a href="{{ event['url'] }}">Book Event</a>
-      <button
-        class="favorites"
-        (click)="this.__TicketmasterApiService.addFavorites(event); delete(i)"
-      >
+      <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event); delete(i)">
         <i class="fas fa-thumbs-up"></i>
       </button>
       <button class="favorites" (click)="delete(i)">
@@ -47,17 +28,18 @@
 </div>
 
 <!-- Sports Card -->
-<!-- <section class="sports-container">
-    <div class="e-data" *ngFor="let event of sportsEvents; let i of index">
-      <p>{{event['name']}}</p>
-      <img class="event-img" src="{{event['images'][1]['url']}}">
-      <p>Date: {{event.dates.start.localDate}}</p>
-      <p>Location: {{event._embedded.venues[0].city.name}}</p>
-      <a href="{{event['url']}}">Book Event</a>
-      <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i class="fas fa-thumbs-up"></i></button>
-      <button class="favorites" (click)="delete(i)"><i class="fas fa-thumbs-down"></i></button>
-    </div>
-</section> -->
+<section class="sports-container">
+  <div class="e-data" *ngFor="let event of sportsEvents; let i = index">
+    <p>{{event['name']}}</p>
+    <img class="event-img" src="{{event['images'][1]['url']}}">
+    <p>Date: {{event.dates.start.localDate}}</p>
+    <p>Location: {{event._embedded.venues[0].city.name}}</p>
+    <a href="{{event['url']}}">Book Event</a><br>
+    <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event)"><i
+        class="fas fa-thumbs-up"></i></button>
+    <button class="favorites" (click)="delete(i)"><i class="fas fa-thumbs-down"></i></button>
+  </div>
+</section>
 <!-- Sports Card -->
 
 <!-- getSports Events-->

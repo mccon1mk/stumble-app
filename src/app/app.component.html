@@ -1,10 +1,15 @@
-<nav>
-  <a routerLink="Home">Home</a>
-  <a routerLink="bucket-list">Bucket List</a>
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul id="menu">
+      <li><a routerLink="Home">Home</a></li>
+      <li><a routerLink="bucket-list">Bucket List</a></li>
+    </ul>
+  </div>
+  <img class="logo-image" src="./assets/stumble.png" alt="logo" />
 </nav>
-
-<div class="top-nav">
-  <img class="logo" src="./assets/stumble.png" alt="logo" />
-</div>
-
 <router-outlet></router-outlet>

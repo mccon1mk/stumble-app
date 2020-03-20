@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap');
+
+
 .category-div {
   position: relative;
   margin-left: calc(15 * 5px);
@@ -12,6 +15,54 @@
   width: 200px;
   height: 500px;
   background-color: white;
+}
+
+.search-bar-container {
+  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: #36413e;
+  animation-name: searchbackground;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes searchbackground {
+  from {
+    background-color: #36413e;
+  }
+
+  to {
+    background-color: #5d5e60;
+  }
+}
+
+.search-bar {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-btn {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid #6b5ca5;
+  background-color: #6b5ca5;
+  color: white;
+}
+
+.search-btn:hover {
+  background-color: #66b4ff;
+  border: #66b4ff solid;
+}
+
+a:hover {
+  background-color: #66b4ff;
 }
 
 .favorites {
@@ -33,12 +84,18 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
   transition: 0.3s;
   padding: 2px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding: 5px
 }
 
 .event-cards {
   display: flex;
   margin: 5%;
   flex-flow: row wrap;
+  background-color: #F5F6FA;
 }
 
 .event-data {
@@ -47,6 +104,7 @@
   align-items: center;
   margin: 5px;
   padding: 5px;
+  background-color: #F5F6FA;
 }
 
 .event-img {
@@ -68,7 +126,14 @@
   flex-direction: column;
 }
 
-/* .event-img {
+p {
+  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
+  text-align: center;
+}
+
+
+
+.event-img {
   display: flex;
   width: 200px;
   height: 300px;
@@ -77,15 +142,20 @@
   left: 40px;
   background-color: #fff;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
-  border-radius: 3px; */
-/* background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pizza_Hut_1967-1999_logo.svg/1200px-Pizza_Hut_1967-1999_logo.svg.png'); */
-/* background-size: contain;
+  border-radius: 3px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pizza_Hut_1967-1999_logo.svg/1200px-Pizza_Hut_1967-1999_logo.svg.png');
+  background-size: contain;
   background-repeat: no-repeat;
-} */
 
-@media (min-width: 600px) {
+  border-radius: 3px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pizza_Hut_1967-1999_logo.svg/1200px-Pizza_Hut_1967-1999_logo.svg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* @media (min-width: 600px) {
   .logo {
     width: 35%;
     height: 35%;
   }
-}
+} */
