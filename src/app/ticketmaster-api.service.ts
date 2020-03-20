@@ -19,6 +19,7 @@ const httpOptions = {
 export class TicketmasterApiService {
 
   private _favorites = [];
+  SportsArr = [];
 
 
 
