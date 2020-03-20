@@ -11,10 +11,10 @@ const options = {
 
 const EventModel = {
   name: String,
+  url: String,
   image: String,
   localDate: Date,
-  city: String,
-  url: String
+  city: String, 
 }
 
 

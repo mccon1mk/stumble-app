@@ -15,10 +15,10 @@ route.post("/", (req, res) => {
 
   const Event = new Events({
     name: req.body.name,
+    url: req.body.url,
     image: req.body.image,
     localDate: req.body.date,
     city: req.body.city,
-    url: req.body.url,
   })
 
   Event.save().then((Event) => {
@@ -31,7 +31,6 @@ route.post("/", (req, res) => {
     })
   })
 })
-
 
 
 module.exports = route;
