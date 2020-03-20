@@ -27,33 +27,6 @@ ul {
 }
 
 
-.container {
-  margin-top: 50px;
-  Display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.phone {
-  background-color: #36383F;
-  border-radius: 40px;
-  width: 300px;
-  height: 600px;
-  Display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 30px 50px 100px #85888C;
-}
-
-.content {
-  border: 1px solid #36383F;
-  border-radius: 20px;
-  width: 94%;
-  height: 91%;
-  background-color: #F5F6FA;
-  overflow: hidden;
-}
-
 nav {
   background-color: #1E1E23;
   height: 65px;
@@ -149,44 +122,6 @@ nav {
   left: 70vw;
 }
 
-/* MOLLY CODE 
-
-
-
-nav {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
-}
-
-ul li {
-  list-style-type: none;
-  margin-bottom: 10px;
-}
-
-li a {
-  text-decoration: none;
-  color: #55b4fb;
-  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
-  font-size: 20px;
-}
-
-p {
-  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
-
-}
-
-
 
 
 @media only screen and (min-width: 992px) {
@@ -199,6 +134,11 @@ p {
   li a {
     margin: 10px;
   }
-}
 
-*/
+  .logo-image {
+    width: 80px;
+    height: 25px;
+    position: relative;
+    left: 85vw;
+  }
+}
