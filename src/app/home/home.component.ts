@@ -45,4 +45,19 @@ export class HomeComponent implements OnInit {
     this.sportsEvents.splice(event, 1);
   }
 
+  let params = encodeURIComponent("Is today going to be a good day?");
+
+let uri = "https://8ball.delegator.com/magic/JSON/" + params;
+
+fetch(uri)
+
+  .then(response => response.json())
+
+  .then(json => {
+
+    console.log(json);
+
+  });
+
+
 }
