@@ -7,7 +7,7 @@ html {
 
 .category-div {
   position: relative;
-  margin-left: calc(15 * 5px);
+  margin-left: calc(15 * 2px);
   background-color: #36413e;
 }
 
@@ -18,8 +18,8 @@ html {
 
 .card {
   position: absolute;
-  width: 350px;
-  height: 500px;
+  width: 300px;
+  height: 400px;
   background-color: #F5F6FA;
 }
 
@@ -29,10 +29,6 @@ html {
   flex-direction: column;
   align-items: center;
   color: #F5F6FA;
-  /* background-color: #36413e; */
-  /* animation-name: searchbackground;
-  animation-duration: 4s;
-  animation-iteration-count: infinite; */
 }
 
 @keyframes searchbackground {
@@ -141,9 +137,17 @@ a:hover {
 } */
 
 
+h2 {
+  padding: 0px;
+  margin: 0;
+}
+
 p {
   font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
   text-align: center;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
 
 
