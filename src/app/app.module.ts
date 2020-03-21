@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     BucketListComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

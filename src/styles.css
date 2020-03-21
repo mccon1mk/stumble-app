@@ -1,1 +1,17 @@
+html {
+  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
+  background-color: #36413e;
+  animation-name: appBackground;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
 
+@keyframes appBackground {
+  from {
+    background-color: #36413e;
+  }
+
+  to {
+    background-color: #5d5e60;
+  }
+}
