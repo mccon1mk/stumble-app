@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { TicketmasterApiService } from './ticketmaster-api.service';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+// import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-interface DialogData {
-  email: string;
-}
+// interface DialogData {
+//   email: string;
+// }
 
 
 @Component({
