@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap');
 
 
+html {
+  background: #8d8d92;
+}
+
 .category-div {
   position: relative;
   margin-left: calc(15 * 5px);
+  background-color: #36413e;
 }
 
 .sports-container {
   position: absolute;
+  background-color: #F5F6FA;
 }
 
 .card {
   position: absolute;
   width: 350px;
-  height: 500px;
-  background-color: white;
+  height: 530px;
+  background-color: #F5F6FA;
 }
 
 .search-bar-container {
@@ -22,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: #F5F6FA;
   background-color: #36413e;
   animation-name: searchbackground;
   animation-duration: 4s;
@@ -53,12 +59,17 @@
   border-radius: 5px;
   border: solid #6b5ca5;
   background-color: #6b5ca5;
-  color: white;
+  color: #F5F6FA;
 }
 
 .search-btn:hover {
   background-color: #66b4ff;
   border: #66b4ff solid;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
 }
 
 a:hover {
@@ -68,9 +79,18 @@ a:hover {
 .favorites {
   border: none;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-content: space-around;
+  background-color: #F5F6FA;
+  margin: 10px;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+#thumbs-section {
+  display: flex;
+  flex-direction: row-reverse;
+  cursor: pointer;
+  user-select: none;
 }
 
 .fas {
@@ -120,11 +140,6 @@ a:hover {
   height: 135px;
 } */
 
-.top-nav {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 
 p {
   font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
@@ -136,19 +151,16 @@ p {
 .event-img {
   display: flex;
   width: 200px;
-  height: 300px;
+  height: 250px;
   border: 1px solid lightgrey;
   top: 40px;
   left: 40px;
-  background-color: #fff;
+  background-color: #F5F6FA;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
   border-radius: 3px;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pizza_Hut_1967-1999_logo.svg/1200px-Pizza_Hut_1967-1999_logo.svg.png');
   background-size: contain;
   background-repeat: no-repeat;
-
   border-radius: 3px;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pizza_Hut_1967-1999_logo.svg/1200px-Pizza_Hut_1967-1999_logo.svg.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
