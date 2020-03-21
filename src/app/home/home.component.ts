@@ -7,10 +7,10 @@ import { TicketmasterApiService } from "../ticketmaster-api.service";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  public sportsEvents;
+  sportsEvents;
+  musicEvents;
+  artEvents;
   public familyEvents;
-  public musicEvents;
-  public artEvents;
   public textSearch;
 
   constructor(public __TicketmasterApiService: TicketmasterApiService) {}
@@ -20,11 +20,9 @@ export class HomeComponent implements OnInit {
       .getSports()
       .subscribe(sports => (this.sportsEvents = sports["_embedded"]["events"]));
     setTimeout(() => {
-      this.__TicketmasterApiService
-        .getFamily()
-        .subscribe(
-          family => (this.familyEvents = family["_embedded"]["events"])
-        );
+      this.__TicketmasterApiService.getFamily().subscribe(family => {
+        this.familyEvents = family["_embedded"]["events"];
+      });
     }, 1000);
     setTimeout(() => {
       this.__TicketmasterApiService.getMusic().subscribe(music => {
@@ -36,6 +34,7 @@ export class HomeComponent implements OnInit {
         this.artEvents = art["_embedded"]["events"];
       });
     }, 2000);
+    this.sportsEvents = this.__TicketmasterApiService.SportsArr;
   }
 
   // Below is only called when Customer searches for events in specific city
@@ -69,7 +68,11 @@ export class HomeComponent implements OnInit {
     this.sportsEvents.splice(event, 1);
   }
 
-  deleteFamily(event) {
-    this.familyEvents.splice(event, 1);
+  deleteMusic(event) {
+    this.musicEvents.splice(event, 1);
+  }
+
+  deleteArt(event) {
+    this.artEvents.splice(event, 1);
   }
 }

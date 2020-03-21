@@ -12,7 +12,8 @@
 }
 
 .category-div,
-.category-div2 {
+.category-div2,
+.category-div3 {
   position: relative;
   margin-left: calc(15 * 5px);
 }
@@ -54,7 +55,11 @@
   position: absolute;
 }
 
-.family-container {
+.music-container {
+  position: absolute;
+}
+
+.art-container {
   position: absolute;
 }
 
