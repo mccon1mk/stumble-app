@@ -20,9 +20,11 @@ export class HomeComponent implements OnInit {
       .getSports()
       .subscribe(sports => (this.sportsEvents = sports["_embedded"]["events"]));
     setTimeout(() => {
-      this.__TicketmasterApiService.getFamily().subscribe(family => {
-        this.familyEvents = family["_embedded"]["events"];
-      });
+      this.__TicketmasterApiService
+        .getFamily()
+        .subscribe(
+          family => (this.familyEvents = family["_embedded"]["events"])
+        );
     }, 1000);
     setTimeout(() => {
       this.__TicketmasterApiService.getMusic().subscribe(music => {
@@ -63,7 +65,11 @@ export class HomeComponent implements OnInit {
     }, 2000);
   }
 
-  delete(event) {
+  deleteSports(event) {
     this.sportsEvents.splice(event, 1);
+  }
+
+  deleteFamily(event) {
+    this.familyEvents.splice(event, 1);
   }
 }
