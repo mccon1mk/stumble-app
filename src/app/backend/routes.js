@@ -17,7 +17,7 @@ route.post("/", (req, res) => {
     name: req.body.name,
     url: req.body.url,
     image: req.body.image,
-    localDate: req.body.date,
+    localDate: req.body.localDate,
     city: req.body.city,
   })
 
