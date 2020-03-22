@@ -1,21 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap');
 
 
+html {
+  background: #8d8d92;
+}
 
-/* * {
-  background: #5d5e60;
-} */
+.category-div {
+  position: relative;
+  margin-left: calc(15 * 2px);
+  background-color: #36413e;
+}
+
+.sports-container {
+  position: absolute;
+  background-color: #F5F6FA;
+}
+
+.card {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: #F5F6FA;
+}
 
 .search-bar-container {
   font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  background-color: #36413e;
-  animation-name: searchbackground;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  color: #F5F6FA;
 }
 
 @keyframes searchbackground {
@@ -42,12 +55,18 @@
   border-radius: 5px;
   border: solid #6b5ca5;
   background-color: #6b5ca5;
-  color: white;
+  color: #F5F6FA;
 }
 
 .search-btn:hover {
   background-color: #66b4ff;
   border: #66b4ff solid;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
+  color: F5F6FA;
 }
 
 a:hover {
@@ -56,6 +75,19 @@ a:hover {
 
 .favorites {
   border: none;
+  display: flex;
+  background-color: #F5F6FA;
+  margin: 10px;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+#thumbs-section {
+  display: flex;
+  flex-direction: row-reverse;
+  cursor: pointer;
+  user-select: none;
 }
 
 .fas {
@@ -66,11 +98,9 @@ a:hover {
 }
 
 .e-data {
-  /* position: absolute;
-
-  width: 200px;
-  height: 300px; */
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  padding: 2px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,49 +124,46 @@ a:hover {
   background-color: #F5F6FA;
 }
 
-.event-img {
-  border-radius: 10%;
-  max-width: 50%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-}
 
-
-.top-nav {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+h2 {
+  padding: 0px;
+  margin: 0;
 }
 
 p {
   font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
   text-align: center;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
 
 
 
-/* .event-img {
+.event-img {
   display: flex;
   width: 200px;
-  height: 300px;
+  height: 200px;
   border: 1px solid lightgrey;
   top: 40px;
   left: 40px;
-  background-color: #fff;
+  background-color: #F5F6FA;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
   border-radius: 3px;
-
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pizza_Hut_1967-1999_logo.svg/1200px-Pizza_Hut_1967-1999_logo.svg.png');
   background-size: contain;
-  background-repeat: no-repeat; */
-/* } */
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
+.book-event {
+  border: solid #6b5ca5;
+  background-color: #6b5ca5;
+  border-radius: 2px;
+  margin-bottom: 3px;
+}
 
-@media (min-width: 600px) {
-  .logo {
-    width: 35%;
-    height: 35%;
-  }
+a {
+  color: white;
 }

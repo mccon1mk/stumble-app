@@ -20,11 +20,14 @@ export class TicketmasterApiService {
 
   private _favorites = [];
   SportsArr = [];
+  FamilyArr = [];
+  MusicArr = [];
+  ArtArr = [];
 
 
 
   constructor(private http: HttpClient) { }
-
+  public cate;
   public city;
   public baseUrl = 'https://app.ticketmaster.com/discovery/v2/events.json'
   public expUrl = 'http://localhost:3000'
@@ -87,6 +90,38 @@ export class TicketmasterApiService {
     return throwError(error.error.text);
     }
     
+  get favorites() {
+    return this._favorites
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  getCategoryMI(Cate): Observable<any> {
+    this.cate = Cate
+    let url = `${this.baseUrl}?apikey=${credentials.apiKey}&keyword=${this.cate}&stateCode=MI`
+    return this.http.get<any>(url)
+  }
 }
 
 
