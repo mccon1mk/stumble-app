@@ -18,6 +18,11 @@
   margin-left: calc(15 * 5px);
 }
 
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .event-data {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
   transition: 0.3s;
