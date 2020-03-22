@@ -24,6 +24,9 @@ export class HomeComponent implements OnInit {
     setTimeout(() => { this.__TicketmasterApiService.getMusic().subscribe(music => { this.musicEvents = music['_embedded']['events'] }) }, 2000);
     setTimeout(() => { this.__TicketmasterApiService.getArt().subscribe(art => { this.artEvents = art['_embedded']['events'] }) }, 2000);
     this.sportsEvents = this.__TicketmasterApiService.SportsArr;
+    this.familyEvents = this.__TicketmasterApiService.FamilyArr;
+    this.musicEvents = this.__TicketmasterApiService.MusicArr;
+    this.artEvents = this.__TicketmasterApiService.ArtArr;
   }
 
 
@@ -43,6 +46,7 @@ export class HomeComponent implements OnInit {
 
   delete(event) {
     this.sportsEvents.splice(event, 1);
+    this.musicEvents.splice(event, 1);
   }
 
 }
