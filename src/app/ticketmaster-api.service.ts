@@ -18,7 +18,7 @@ export class TicketmasterApiService {
 
 
   constructor(private http: HttpClient) { }
-
+  public cate;
   public city;
   public baseUrl = 'https://app.ticketmaster.com/discovery/v2/events.json'
 
@@ -67,5 +67,34 @@ export class TicketmasterApiService {
 
   get favorites() {
     return this._favorites
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  getCategoryMI(Cate): Observable<any> {
+    this.cate = Cate
+    let url = `${this.baseUrl}?apikey=${credentials.apiKey}&keyword=${this.cate}&stateCode=MI`
+    return this.http.get<any>(url)
   }
 }
