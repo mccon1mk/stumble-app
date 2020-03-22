@@ -16,7 +16,6 @@ export class BucketListComponent implements OnInit {
 
   ngOnInit() {
   this.__TicketmasterApiService.getFavorites().subscribe(data => this.favs = data)
-  // this.__TicketmasterApiService.getFavorites().subscribe(data => console.log(data))
+  this.__TicketmasterApiService.getFavorites().subscribe(data => console.log(data))
   }
-
 }
