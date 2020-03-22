@@ -11,10 +11,6 @@ html {
   background-color: #36413e;
 }
 
-.sports-container {
-  position: absolute;
-  background-color: #F5F6FA;
-}
 
 .card {
   position: absolute;
@@ -166,4 +162,11 @@ p {
 
 a {
   color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .sports-container {
+    display: flex;
+    justify-content: center;
+  }
 }

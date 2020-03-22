@@ -21,6 +21,10 @@ a:hover {
   color: #66b4ff;
 }
 
+li a:hover {
+  color: #66b4ff;
+}
+
 ul {
   padding: 0;
   list-style-type: none;
@@ -95,7 +99,7 @@ nav {
   position: absolute;
   width: 200px;
   height: 500px;
-  box-shadow: 0 0 10px #85888C;
+  box-shadow: 5px 5px 10px #85888C;
   margin: -50px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -122,23 +126,94 @@ nav {
   left: 70vw;
 }
 
+#logo-menu {
+  position: relative;
+  width: 80px;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+#menu-desktop {
+  display: none;
+}
+
+#menuToggle-desktop {
+  display: none;
+}
 
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
+  .logo-image {
+    width: 80px;
+    height: 25px;
+    position: relative;
+    left: 85vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .logo-image {
+    width: 80px;
+    height: 25px;
+    position: relative;
+    left: 88vw;
+  }
+}
+
+
+@media only screen and (min-width: 993px) {
   nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  li {
+    margin-right: 30px;
   }
 
   li a {
-    margin: 10px;
+    margin: 0px;
+    padding: 0px;
+    color: #F5F6FA;
+  }
+
+  li a:hover {
+    color: #66b4ff;
+  }
+
+  li a:active {
+    color: #5d5e60;
   }
 
   .logo-image {
     width: 80px;
     height: 25px;
     position: relative;
-    left: 85vw;
+    left: 2vw;
+    top: 20px;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  #menuToggle span {
+    display: none;
+  }
+
+  #menu {
+    visibility: hidden;
+  }
+
+  #menu-desktop {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 18px;
+    color: #F5F6FA;
+  }
+
+  #menuToggle-desktop {
+    margin: 2px;
   }
 }
