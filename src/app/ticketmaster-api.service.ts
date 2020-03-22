@@ -11,6 +11,9 @@ export class TicketmasterApiService {
 
   private _favorites = [];
   SportsArr = [];
+  FamilyArr = [];
+  MusicArr = [];
+  ArtArr = [];
 
 
 

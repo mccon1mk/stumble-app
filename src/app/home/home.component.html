@@ -35,6 +35,73 @@
   <section class="sports-container" [ngStyle]="{
       top: i * -5 + 'px',
       left: i * -5 + 'px'
+    }" *ngFor="let event of artEvents; let i = index">
+    <div class="e-data card" *ngIf="i < 5">
+      <p>{{ event["name"] }}</p>
+      <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
+      <p>Date: {{ event.dates.start.localDate }}</p>
+      <p>Location: {{ event._embedded.venues[0].city.name }}</p>
+      <a href="{{ event['url'] }}">Book Event</a>
+      <span id="thumbs-section"><button class="favorites"
+          (click)="this.__TicketmasterApiService.addFavorites(event); delete(i)">
+          <i class="fas fa-thumbs-up"></i>
+        </button>
+        <button class="favorites" (click)="delete(i)">
+          <i class="fas fa-thumbs-down"></i>
+        </button></span>
+    </div>
+  </section>
+</div>
+
+<div class="category-div">
+  <section class="sports-container" [ngStyle]="{
+      top: i * -5 + 'px',
+      left: i * -5 + 'px'
+    }" *ngFor="let event of musicEvents; let i = index">
+    <div class="e-data card" *ngIf="i < 5">
+      <p>{{ event["name"] }}</p>
+      <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
+      <p>Date: {{ event.dates.start.localDate }}</p>
+      <p>Location: {{ event._embedded.venues[0].city.name }}</p>
+      <a href="{{ event['url'] }}">Book Event</a>
+      <span id="thumbs-section"><button class="favorites"
+          (click)="this.__TicketmasterApiService.addFavorites(event); delete(i)">
+          <i class="fas fa-thumbs-up"></i>
+        </button>
+        <button class="favorites" (click)="delete(i)">
+          <i class="fas fa-thumbs-down"></i>
+        </button></span>
+    </div>
+  </section>
+</div>
+
+<div class="category-div">
+  <section class="sports-container" [ngStyle]="{
+      top: i * -5 + 'px',
+      left: i * -5 + 'px'
+    }" *ngFor="let event of familyEvents; let i = index">
+    <div class="e-data card" *ngIf="i < 5">
+      <p>{{ event["name"] }}</p>
+      <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
+      <p>Date: {{ event.dates.start.localDate }}</p>
+      <p>Location: {{ event._embedded.venues[0].city.name }}</p>
+      <a href="{{ event['url'] }}">Book Event</a>
+      <span id="thumbs-section"><button class="favorites"
+          (click)="this.__TicketmasterApiService.addFavorites(event); delete(i)">
+          <i class="fas fa-thumbs-up"></i>
+        </button>
+        <button class="favorites" (click)="delete(i)">
+          <i class="fas fa-thumbs-down"></i>
+        </button></span>
+    </div>
+  </section>
+</div>
+
+
+<!-- <div class="category-div">
+  <section class="sports-container" [ngStyle]="{
+      top: i * -5 + 'px',
+      left: i * -5 + 'px'
     }" *ngFor="let event of musicEvents; let i = index">
     <div class="e-data card" *ngIf="i < 5">
       <p>{{ event["name"] }}</p>
@@ -96,5 +163,3 @@
     </div>
   </section>
 </div>
-
-<br>
