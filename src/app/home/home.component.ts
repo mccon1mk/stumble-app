@@ -25,13 +25,13 @@ export class HomeComponent implements OnInit {
     setTimeout(() => { this.__TicketmasterApiService.getFamily().subscribe(family =>  { 
       console.log(family['page']['totalElements'])
       if (family['page']['totalElements'] === 0) {
-        this.__TicketmasterApiService.getCategoryMI('family').subscribe(family => this.familyEvents = family['_embedded']['events']);
+        setTimeout(() => this.__TicketmasterApiService.getCategoryMI('family').subscribe(family => this.familyEvents = family['_embedded']['events']),2000)
       } else {
       this.familyEvents = family['_embedded']['events'] 
       }})}, 1000)
 
-    setTimeout(() => { this.__TicketmasterApiService.getMusic().subscribe(music => { this.musicEvents = music['_embedded']['events'] }) }, 2000);
-    setTimeout(() => { this.__TicketmasterApiService.getArt().subscribe(art => { this.artEvents = art['_embedded']['events'] }) }, 3000);
+    setTimeout(() => { this.__TicketmasterApiService.getMusic().subscribe(music => { this.musicEvents = music['_embedded']['events'] }) }, 4000);
+    setTimeout(() => { this.__TicketmasterApiService.getArt().subscribe(art => { this.artEvents = art['_embedded']['events'] }) }, 5000);
 
 
     this.sportsEvents = this.__TicketmasterApiService.SportsArr;
