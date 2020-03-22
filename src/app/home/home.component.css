@@ -66,6 +66,7 @@ html {
 a {
   text-decoration: none;
   font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
+  color: F5F6FA;
 }
 
 a:hover {
@@ -123,19 +124,6 @@ a:hover {
   background-color: #F5F6FA;
 }
 
-/* .event-img {
-  border-radius: 10%;
-  max-width: 50%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-
-  box-sizing: border-box;
-  width: 100%;
-  height: 135px;
-} */
-
 
 h2 {
   padding: 0px;
@@ -169,9 +157,13 @@ p {
   background-repeat: no-repeat;
 }
 
-/* @media (min-width: 600px) {
-  .logo {
-    width: 35%;
-    height: 35%;
-  }
-} */
+.book-event {
+  border: solid #6b5ca5;
+  background-color: #6b5ca5;
+  border-radius: 2px;
+  margin-bottom: 3px;
+}
+
+a {
+  color: white;
+}
