@@ -6,19 +6,19 @@
 
 .card {
   position: absolute;
-  width: 300px;
+  width: 200px;
   height: 450px;
   background-color: white;
 }
 
-.category-div,
-.category-div2,
-.category-div3 {
+.category-sports,
+.category-music,
+.category-art {
   position: relative;
   margin-left: calc(15 * 5px);
 }
 
-.container {
+.decks-container {
   display: flex;
   justify-content: space-around;
 }
