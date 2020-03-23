@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap');
 
 
+.example-tab-icon {
+  margin-right: 8px;
+}
+
 html {
   background: #8d8d92;
 }
@@ -8,7 +12,7 @@ html {
 .category-div {
   position: relative;
   margin-left: calc(15 * 2px);
-  background-color: #36413e;
+  /* background-color: #36413e; */
 }
 
 .sports-container {
@@ -31,15 +35,6 @@ html {
   color: #F5F6FA;
 }
 
-@keyframes searchbackground {
-  from {
-    background-color: #36413e;
-  }
-
-  to {
-    background-color: #5d5e60;
-  }
-}
 
 .search-bar {
   width: 50%;
