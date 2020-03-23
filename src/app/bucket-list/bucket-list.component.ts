@@ -9,14 +9,14 @@ import { TicketmasterApiService } from '../ticketmaster-api.service';
 export class BucketListComponent implements OnInit {
 
   public favs;
-
+  
   constructor(public __TicketmasterApiService: TicketmasterApiService) {
 
   }
 
   ngOnInit() {
-  this.__TicketmasterApiService.getFavorites().subscribe(data => this.favs = data)
-  this.__TicketmasterApiService.getFavorites().subscribe(data => console.log(data))
+
+    this.__TicketmasterApiService.getFavorites().subscribe(data => this.favs = data)
   }
 
 

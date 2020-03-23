@@ -1,11 +1,10 @@
+<p>bucket-list works!</p>
 <section>
-  <div>
-    <div class="event-data" *ngFor="let fav of favs">
-      <p>Event: {{fav['name']}}</p>
-      <img class="event-img" src="{{fav['image']}}">
-      <p>Date: {{fav['localDate']}}</p>
-      <p>Location: {{fav['city']}}</p>
-      <a href="{{fav['url']}}">Book Event</a><br>
-    </div>
+  <div class="event-data" *ngFor="let fav of favs">
+    <p>Event: {{fav['name']}}</p>
+    <img class="event-img" src="{{fav['image']}}">
+    <p>Date: {{fav['localDate']}}</p>
+    <p>Location: {{fav['city']}}</p>
+    <a href="{{fav['url']}}">Book Event</a><br>
   </div>
 </section>
