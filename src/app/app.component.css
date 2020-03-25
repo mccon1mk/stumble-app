@@ -218,3 +218,55 @@ nav {
     margin: 2px;
   }
 }
+.arrow-button {
+-webkit-tap-highlight-color: transparent;
+background: transparent;
+border: 0;
+color: black;
+font-family: 'Roboto Mono', monospace;
+}
+
+.box {
+text-align: center;
+border: 1px solid white;
+padding: 3ch;
+position: relative;
+min-width: 30ch;
+background-color: #66b4ff;
+}
+
+header {
+position: absolute;
+display: inline-block;
+left: 0;
+right: 0;
+top: -.65em;
+text-decoration: none; 
+color: #1E1E23;
+}
+
+main {
+color: #36413e;
+
+}
+
+.title {
+background: #66b4ff;
+padding: 0 1ch;
+}
+
+footer {
+padding-top: 2ch;
+}
+
+button {
+-webkit-tap-highlight-color: transparent;
+border: 0;
+color: white;
+background-color: #6b5ca5;
+font-family: 'Roboto Mono', monospace;
+margin: 1ch;
+border: 1px solid;
+width: 60px;
+height: 25px;  
+}

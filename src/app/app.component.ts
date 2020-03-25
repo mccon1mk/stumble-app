@@ -13,11 +13,17 @@ export class AppComponent {
   public artEvents;
   public textSearch;
 
-
-
   constructor(private __TicketmasterApiService: TicketmasterApiService) { }
 
+  popUpOpen = false;
 
+  openPopUp() {
+    this.popUpOpen = true;
+  }
+
+  cancelOption() {
+    this.popUpOpen = false;
+  }
   ngOnInit() {
 
   }

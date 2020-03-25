@@ -4,21 +4,29 @@
     <span></span>
     <span></span>
     <span></span>
+
     <ul id="menu">
-      <img id="logo-menu" src="./assets/stumble.png" alt="logo" />
       <li><a routerLink="Home">Home</a></li>
       <li><a routerLink="bucket-list">Bucket List</a></li>
     </ul>
   </div>
   <img class="logo-image" src="./assets/stumble.png" alt="logo" />
-  <div id="menuToggle-desktop"></div>
-  <ul id="menu-desktop">
-    <li><a routerLink="Home">Home</a></li>
-    <li><a routerLink="bucket-list">Bucket List</a></li>
-  </ul>
-
 </nav>
 
-
+<button class="arrow-button" [disabled]="popUpOpen" (click)="openPopUp()">&#x25b6; Show Intro</button>
+<app-pop-up class="my-prompt" [isOpen]="popUpOpen">
+  <div class="box">
+    <header>
+      <span class="title"> Welcome to Stumble</span>
+    </header>
+    <main>
+      Search for events by the city and click thumps up icon to add to your bucket list! <br/>
+      Click thumbs down to remove the event.  
+    </main>
+    <footer>
+      <button (click)="cancelOption()">OK</button>
+    </footer>
+  </div>
+</app-pop-up>
 
 <router-outlet></router-outlet>

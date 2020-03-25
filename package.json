@@ -75,5 +75,6 @@
   "bugs": {
     "url": "https://github.com/mccon1mk/stumble-app/issues"
   },
-  "homepage": "https://github.com/mccon1mk/stumble-app#readme"
+  "homepage": "https://github.com/mccon1mk/stumble-app#readme",
+  "keywords": []
 }
