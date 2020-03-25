@@ -8,16 +8,18 @@ import { TicketmasterApiService } from '../ticketmaster-api.service';
 })
 export class BucketListComponent implements OnInit {
 
-  public favs;
-  
-  constructor(public __TicketmasterApiService: TicketmasterApiService) {
+ 
+  public blEvents: any[];
 
-  }
+  constructor(public __TicketmasterApiService: TicketmasterApiService) {
+ 
+   }
 
   ngOnInit() {
 
-    this.__TicketmasterApiService.getFavorites().subscribe(data => this.favs = data)
+   this.blEvents = this.__TicketmasterApiService.favorites;
+   console.log ("Service Favorite Count: " +   this.__TicketmasterApiService.favorites.length);
+   console.log ("Bucket List Event Count: " + this.blEvents.length);
   }
-
 
 }
