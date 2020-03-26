@@ -6,18 +6,17 @@ a {
   color: #f5f6fa;
 }
 
-.example-tab-icon {
-  margin-right: 8px;
-}
 
 html {
   background: #8d8d92;
+  width: 100vw;
+  height: 100vh;
 }
 
 .category-div {
   position: relative;
   margin-left: calc(15 * 2px);
-  /* background-color: #36413e; */
+  background-color: white;
 }
 
 a:hover {
@@ -36,7 +35,6 @@ a:hover {
 }
 
 .card {
-  position: absolute;
   width: 300px;
   height: 400px;
   background-color: #f5f6fa;
@@ -69,14 +67,16 @@ a {
   text-decoration: none;
   font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
   color: F5F6FA;
-.category-div {
+}
+  .category-div {
   position: relative;
   margin-left: calc(15 * 2px);
 }
 
 .decks-container {
   display: flex;
-  justify-content: space-around;
+flex-direction: row;
+justify-content: center;
 }
 
 .event-data {
@@ -187,3 +187,4 @@ p {
   cursor: pointer;
   user-select: none;
 }
+
