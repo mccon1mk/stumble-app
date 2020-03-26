@@ -19,6 +19,8 @@ a:hover {
 
 .cards-container {
   position: absolute;
+  /* display: flex;
+  flex-flow: column wrap; */
 }
 
 .card {
@@ -34,8 +36,9 @@ a:hover {
 }
 
 .decks-container {
+  max-width: 600px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .event-data {
@@ -147,9 +150,10 @@ p {
   user-select: none;
 }
 
-@media (min-width: 600px) {
-  .logo {
-    width: 35%;
-    height: 35%;
+@media (min-width: 768px) {
+  .decks-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

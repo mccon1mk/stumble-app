@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   artEvents;
   public textSearch;
 
+  items: any;
+
   constructor(public __TicketmasterApiService: TicketmasterApiService) {}
 
   ngOnInit() {

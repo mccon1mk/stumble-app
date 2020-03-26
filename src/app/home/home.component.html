@@ -17,10 +17,7 @@
   <div class="category-div">
     <section
       class="cards-container"
-      [ngStyle]="{
-        top: i * -5 + 'px',
-        left: i * -5 + 'px'
-      }"
+      [ngStyle]="{ top: i * -5 + 'px', left: i * -5 + 'px' }"
       *ngFor="let event of sportsEvents; let i = index"
     >
       <div class="event-data card" *ngIf="i < 5">
