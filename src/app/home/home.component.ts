@@ -91,4 +91,5 @@ export class HomeComponent implements OnInit {
   deleteArt(event) {
     this.artEvents.splice(event, 1);
   }
+  
 }
