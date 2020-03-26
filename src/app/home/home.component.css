@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 a {
   text-decoration: none;
-  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #f5f6fa;
 }
 
@@ -11,6 +11,7 @@ html {
   background: #8d8d92;
   width: 100vw;
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
 .category-div {
@@ -65,7 +66,7 @@ a:hover {
 
 a {
   text-decoration: none;
-  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: F5F6FA;
 }
   .category-div {
@@ -134,7 +135,7 @@ html {
 }
 
 p {
-  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  font-family: 'Roboto', sans-serif;  
   text-align: center;
   padding: 0px;
   margin-top: 5px;
@@ -159,7 +160,7 @@ p {
 }
 
 .search-bar-container {
-  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  font-family: 'Roboto', sans-serif;  
   display: flex;
   flex-direction: column;
   align-items: center;
