@@ -20,7 +20,15 @@ export class BucketListComponent implements OnInit {
       .subscribe(data => console.log(data));
   }
 
-  removeEvent(event) {
-    this.favs.splice(event, 1);
+  // removeEventDB(fav) {
+  //   this.__TicketmasterApiService.removeEvent(fav)
+  //   .subscribe(data => console.log(data));
+  // }
+
+  removeEvent(fav, i) {
+    this.favs.splice(i, 1);
+    this.__TicketmasterApiService
+      .removeEvent(fav)
+      .subscribe(data => console.log(data));
   }
 }

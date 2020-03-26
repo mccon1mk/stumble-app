@@ -3,8 +3,7 @@ const route = express.Router()
 route.use(express.json());
 const db = require("./mongoose");
 const Events = db.mongoose.model('Events', db.events)
-
-
+// const deleteEvent = db.mongoose.model('deleteEvent', db.delete)
 
 
 route.post("/", (req, res) => {
@@ -39,6 +38,28 @@ route.get("/", (req, res) => {
     resp.status(500).send(err)
     // console.log(err)
   })
+})
+
+
+
+route.delete('/:id', async (req, res) => {
+  let id = req.params.id
+  try {
+    const event = await Events.findByIdAndDelete(id)
+
+    if (!event) {
+       res.status(404).send("message: User does not exist")
+    }
+
+    console.log(event)
+    res.status(200).send()
+
+  } catch(err) {
+    console.log(err)
+   res.status(500).send(err)
+  }
+  
+
 })
 
 

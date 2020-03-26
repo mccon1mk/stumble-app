@@ -5,7 +5,7 @@
     <p>Date: {{ fav["localDate"] }}</p>
     <p>Location: {{ fav["city"] }}</p>
     <a href="{{ fav['url'] }}">Book Event</a>
-    <button class="remove" (click)="removeEvent(i)">
+    <button class="remove" (click)="removeEvent(fav, i)">
       <i class="fas fa-times"></i>
     </button>
   </div>
