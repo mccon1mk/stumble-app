@@ -62,9 +62,11 @@ a:hover {
   background-repeat: no-repeat;
 }
 
-.decks-container {
-  display: flex;
-  justify-content: space-around;
+.fas {
+  font-size: 30px;
+  cursor: pointer;
+  color: #66b4ff;
+  user-select: none;
 }
 
 .fas:hover {
