@@ -34,6 +34,8 @@
     "ionic": "^5.4.16",
     "mongoose": "^5.9.5",
     "ng-simple-slideshow": "^1.2.9",
+    "ng-swipe-card": "0.0.4",
+    "node-sass": "^4.13.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

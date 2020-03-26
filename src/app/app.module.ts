@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,13 +14,11 @@ import {MatIconModule} from '@angular/material/icon';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     BucketListComponent,
     HomeComponent,
-
   ],
   imports: [
     BrowserModule,

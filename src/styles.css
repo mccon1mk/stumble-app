@@ -20,7 +20,7 @@ html {
   font-family: 'Roboto', sans-serif;  
   background: #5d5e60;
   animation-name: appBackground;
-  animation-duration: 8s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
 }
 
