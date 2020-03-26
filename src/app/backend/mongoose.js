@@ -20,12 +20,16 @@ const EventModel = {
   city: String, 
 }
 
+// const deleteEventModel = {
+//   _id: String
+// }
+
 
 const db = {};
 db.mongoose = mongoose;
 db.url = CURL;
 db.options = options;
 db.events = EventModel;
-
+// db.delete = deleteEventModel;
 
 module.exports = db
