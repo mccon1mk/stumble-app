@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap");
 
+a {
+  text-decoration: none;
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  color: #f5f6fa;
+}
 
 .example-tab-icon {
   margin-right: 8px;
@@ -15,24 +20,26 @@ html {
   /* background-color: #36413e; */
 }
 
-.sports-container {
+a:hover {
+  background-color: #66b4ff;
+}
+
+.book-event {
+  border: solid #6b5ca5;
+  background-color: #6b5ca5;
+  border-radius: 2px;
+  margin-bottom: 3px;
+}
+
+.cards-container {
   position: absolute;
-  background-color: #F5F6FA;
 }
 
 .card {
   position: absolute;
   width: 300px;
   height: 400px;
-  background-color: #F5F6FA;
-}
-
-.search-bar-container {
-  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #F5F6FA;
+  background-color: #f5f6fa;
 }
 
 
@@ -62,27 +69,38 @@ a {
   text-decoration: none;
   font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
   color: F5F6FA;
+.category-div {
+  position: relative;
+  margin-left: calc(15 * 2px);
 }
 
-a:hover {
-  background-color: #66b4ff;
-}
-
-.favorites {
-  border: none;
+.decks-container {
   display: flex;
-  background-color: #F5F6FA;
-  margin: 10px;
-  cursor: pointer;
-  user-select: none;
-
+  justify-content: space-around;
 }
 
-#thumbs-section {
+.event-data {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  padding: 2px 16px;
   display: flex;
-  flex-direction: row-reverse;
-  cursor: pointer;
-  user-select: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.event-img {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid lightgrey;
+  top: 40px;
+  left: 40px;
+  background-color: #f5f6fa;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .fas {
@@ -92,73 +110,80 @@ a:hover {
   user-select: none;
 }
 
-.e-data {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
-  padding: 2px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-  padding: 5px
+.fas:hover {
+  color: #b3daff;
 }
 
-.event-cards {
+.favorites {
+  border: none;
   display: flex;
-  margin: 5%;
-  flex-flow: row wrap;
-  background-color: #F5F6FA;
+  background-color: #f5f6fa;
+  margin: 10px;
+  cursor: pointer;
+  user-select: none;
 }
-
-.event-data {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5px;
-  padding: 5px;
-  background-color: #F5F6FA;
-}
-
 
 h2 {
   padding: 0px;
   margin: 0;
 }
 
+html {
+  background: #8d8d92;
+  width: 50%;
+}
+
 p {
-  font-family: 'News Cycle', 'Encode Sans Semi Expanded', sans-serif;
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   text-align: center;
   padding: 0px;
   margin-top: 5px;
   margin-bottom: 3px;
 }
 
+@keyframes searchbackground {
+  from {
+    background-color: #36413e;
+  }
 
-
-.event-img {
-  display: flex;
-  width: 200px;
-  height: 200px;
-  border: 1px solid lightgrey;
-  top: 40px;
-  left: 40px;
-  background-color: #F5F6FA;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
-  border-radius: 3px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border-radius: 3px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  to {
+    background-color: #5d5e60;
+  }
 }
 
-.book-event {
+.search-bar {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-bar-container {
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f5f6fa;
+}
+
+.search-btn {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
   border: solid #6b5ca5;
   background-color: #6b5ca5;
-  border-radius: 2px;
-  margin-bottom: 3px;
+  color: #f5f6fa;
 }
 
-a {
-  color: white;
+.search-btn:hover {
+  background-color: #66b4ff;
+  border: #66b4ff solid;
+}
+
+#thumbs-section {
+  display: flex;
+  flex-direction: row-reverse;
+  cursor: pointer;
+  user-select: none;
 }
