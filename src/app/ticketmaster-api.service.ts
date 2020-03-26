@@ -52,21 +52,34 @@ export class TicketmasterApiService {
     return this.http.get<any>(artUrl);
   }
 
+
+
   addFavorites(event) {
     const item = {
-      name: event.name,
-      url: event.url,
-      image: event["images"][8]["url"],
-      localDate: event.dates.start.localDate,
-      city: event._embedded.venues[0].city.name
-    };
-    console.log(event);
-    this._favorites.push(event);
-    console.log("Service Favorite Count: " + this._favorites.length);
-    return this.http
-      .post(this.expUrl, item)
-      .subscribe(data => console.log(data));
+      "name": event.name,
+      "url": event.url,
+      "image": event['images'][8]['url'],
+      "localDate": event.dates.start.localDate.toString(),
+      "city": event._embedded.venues[0].city.name
+    }
+  
+    return this.http.post(this.expUrl, item).subscribe(data => console.log(data)) 
   }
+  // addFavorites(event) {
+  //   const item = {
+  //     name: event.name,
+  //     url: event.url,
+  //     image: event["images"][8]["url"],
+  //     localDate: event.dates.start.localDate,
+  //     city: event._embedded.venues[0].city.name
+  //   };
+  //   console.log(event);
+  //   this._favorites.push(event);
+  //   console.log("Service Favorite Count: " + this._favorites.length);
+  //   return this.http
+  //     .post(this.expUrl, item)
+  //     .subscribe(data => console.log(data));
+  // }
 
   getFavorites() {
     return this.http.get(this.expUrl);
@@ -95,3 +108,4 @@ export class TicketmasterApiService {
   }
 
 }
+

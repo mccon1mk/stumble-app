@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 html {
   background-color: #f9f9f9;
@@ -10,7 +10,7 @@ a {
   text-decoration: none;
   color: #1e1e23;
   opacity: 1;
-  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5em;
   font-weight: 400;
   transition: 200ms;
