@@ -26,7 +26,7 @@ export class TicketmasterApiService {
   public cate;
   public city;
   public baseUrl = "https://app.ticketmaster.com/discovery/v2/events.json";
-  public expUrl = "http://localhost:3000";
+  public expUrl = "http://localhost:3000/";
 
   getSports(textSearch = "detroit"): Observable<any> {
     this.city = textSearch;
@@ -85,4 +85,13 @@ export class TicketmasterApiService {
     let url = `${this.baseUrl}?apikey=${credentials.apiKey}&keyword=${this.cate}&stateCode=MI`;
     return this.http.get<any>(url);
   }
+
+  removeEvent(fav): Observable<any> {
+    const item = {
+      id: fav._id
+    }
+    return this.http
+      .delete(this.expUrl + item.id)
+  }
+
 }
