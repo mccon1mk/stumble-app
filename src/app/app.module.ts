@@ -7,17 +7,20 @@ import { FormsModule } from '@angular/forms';
 import { BucketListComponent } from './bucket-list/bucket-list.component';
 import { HomeComponent } from './home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     BucketListComponent,
     HomeComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

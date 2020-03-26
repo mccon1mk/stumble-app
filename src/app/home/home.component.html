@@ -1,39 +1,38 @@
 <!-- Search Input Field  -->
-<section class="search-fields">
-  <div class="search-bar-container">
-    <h4>Search For Events Nearby!</h4>
-    <input
-      [(ngModel)]="textSearch"
-      type="text"
-      placeholder="Type in city here"
-      class="search-bar"
-    />
-
-    <button class="search-btn" (click)="onSearch(textSearch)">
-      Search
-    </button>
-    <p>
-      Click the thumbs up icon to save the event to your bucket list!
-    </p>
-  </div>
+<section class="search-bar-container">
+  <p>
+    Search for events by entering a city below and click the thumbs up icon to
+    save the event to your bucket list!
+  </p>
+  <input
+    [(ngModel)]="textSearch"
+    type="text"
+    placeholder="Type in city here"
+    class="search-bar"
+  />
+  <button class="search-btn" (click)="onSearch(textSearch)">Submit</button>
 </section>
 
 <div class="decks-container">
-  <!-- Sports Events -->
-  <div class="category-sports">
+  <div class="category-div">
     <section
-      class="sports-container"
-      [ngStyle]="{ top: i * -5 + 'px', left: i * -5 + 'px' }"
+      class="cards-container"
+      [ngStyle]="{
+        top: i * -5 + 'px',
+        left: i * -5 + 'px'
+      }"
       *ngFor="let event of sportsEvents; let i = index"
     >
       <div class="event-data card" *ngIf="i < 5">
         <p>{{ event["name"] }}</p>
         <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
-        <p>Date: {{ event.dates.start.localDate }}</p>
         <p>Location: {{ event._embedded.venues[0].city.name }}</p>
-        <a href="{{ event['url'] }}">Book Event</a>
-        <div class="button-container">
-          <button
+        <p>Date: {{ event.dates.start.localDate }}</p>
+        <button class="book-event">
+          <a href="{{ event['url'] }}">Book Event</a>
+        </button>
+        <span id="thumbs-section"
+          ><button
             class="favorites"
             (click)="
               this.__TicketmasterApiService.addFavorites(event); deleteSports(i)
@@ -42,60 +41,31 @@
             <i class="fas fa-thumbs-up"></i>
           </button>
           <button class="favorites" (click)="deleteSports(i)">
-            <i class="fas fa-thumbs-down"></i>
-          </button>
-        </div>
+            <i class="fas fa-thumbs-down"></i></button
+        ></span>
       </div>
     </section>
   </div>
-  <!-- Sports Events -->
 
-  <!-- getMusic Events -->
-  <div class="category-music">
+  <div class="category-div">
     <section
-      class="music-container"
-      [ngStyle]="{ top: i * -5 + 'px', left: i * -5 + 'px' }"
-      *ngFor="let event of musicEvents; let i = index"
-    >
-      <div class="event-data card" *ngIf="i < 5">
-        <p>Event: {{ event["name"] }}</p>
-        <img class="event-img" src="{{ event['images'][8]['url'] }}" />
-        <p>Date: {{ event.dates.start.localDate }}</p>
-        <p>Location: {{ event._embedded.venues[0].city.name }}</p>
-        <a href="{{ event['url'] }}">Book Event</a>
-        <div class="button-container">
-          <button
-            class="favorites"
-            (click)="
-              this.__TicketmasterApiService.addFavorites(event); deleteMusic(i)
-            "
-          >
-            <i class="fas fa-thumbs-up"></i>
-          </button>
-          <button class="favorites" (click)="deleteMusic(i)">
-            <i class="fas fa-thumbs-down"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- getMusic Events -->
-
-  <!-- getArt Events -->
-  <div class="category-art">
-    <section
-      class="art-container"
-      [ngStyle]="{ top: i * -5 + 'px', left: i * -5 + 'px' }"
+      class="cards-container"
+      [ngStyle]="{
+        top: i * -5 + 'px',
+        left: i * -5 + 'px'
+      }"
       *ngFor="let event of artEvents; let i = index"
     >
       <div class="event-data card" *ngIf="i < 5">
-        <p>Event: {{ event["name"] }}</p>
-        <img class="event-img" src="{{ event['images'][8]['url'] }}" />
-        <p>Date: {{ event.dates.start.localDate }}</p>
+        <p>{{ event["name"] }}</p>
+        <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
         <p>Location: {{ event._embedded.venues[0].city.name }}</p>
-        <a href="{{ event['url'] }}">Book Event</a>
-        <div class="button-container">
-          <button
+        <p>Date: {{ event.dates.start.localDate }}</p>
+        <button class="book-event">
+          <a href="{{ event['url'] }}">Book Event</a>
+        </button>
+        <span id="thumbs-section"
+          ><button
             class="favorites"
             (click)="
               this.__TicketmasterApiService.addFavorites(event); deleteArt(i)
@@ -104,42 +74,75 @@
             <i class="fas fa-thumbs-up"></i>
           </button>
           <button class="favorites" (click)="deleteArt(i)">
-            <i class="fas fa-thumbs-down"></i>
+            <i class="fas fa-thumbs-down"></i></button
+        ></span>
+      </div>
+    </section>
+  </div>
+
+  <div class="category-div">
+    <section
+      class="cards-container"
+      [ngStyle]="{
+        top: i * -5 + 'px',
+        left: i * -5 + 'px'
+      }"
+      *ngFor="let event of musicEvents; let i = index"
+    >
+      <div class="event-data card" *ngIf="i < 5">
+        <p>{{ event["name"] }}</p>
+        <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
+        <p>Location: {{ event._embedded.venues[0].city.name }}</p>
+        <p>Date: {{ event.dates.start.localDate }}</p>
+        <button class="book-event">
+          <a href="{{ event['url'] }}">Book Event</a>
+        </button>
+        <span id="thumbs-section"
+          ><button
+            class="favorites"
+            (click)="
+              this.__TicketmasterApiService.addFavorites(event); deleteMusic(i)
+            "
+          >
+            <i class="fas fa-thumbs-up"></i>
           </button>
-        </div>
+          <button class="favorites" (click)="deleteMusic(i)">
+            <i class="fas fa-thumbs-down"></i></button
+        ></span>
+      </div>
+    </section>
+  </div>
+
+  <div class="category-div">
+    <section
+      class="cards-container"
+      [ngStyle]="{
+        top: i * -5 + 'px',
+        left: i * -5 + 'px'
+      }"
+      *ngFor="let event of familyEvents; let i = index"
+    >
+      <div class="event-data card" *ngIf="i < 5">
+        <p>{{ event["name"] }}</p>
+        <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
+        <p>Location: {{ event._embedded.venues[0].city.name }}</p>
+        <p>Date: {{ event.dates.start.localDate }}</p>
+        <button class="book-event">
+          <a href="{{ event['url'] }}">Book Event</a>
+        </button>
+        <span id="thumbs-section"
+          ><button
+            class="favorites"
+            (click)="
+              this.__TicketmasterApiService.addFavorites(event); deleteFamily(i)
+            "
+          >
+            <i class="fas fa-thumbs-up"></i>
+          </button>
+          <button class="favorites" (click)="deleteFamily(i)">
+            <i class="fas fa-thumbs-down"></i></button
+        ></span>
       </div>
     </section>
   </div>
 </div>
-<!-- getArt Events -->
-
-<!-- getFamily Events -->
-<!-- <div class="category-div2">
-  <section
-    class="family-container"
-    [ngStyle]="{ top: i * -5 + 'px', left: i * -5 + 'px' }"
-    *ngFor="let event of familyEvents; let i = index"
-  >
-    <div class="event-data card" *ngIf="i < 5">
-      <p>{{ event["name"] }}</p>
-      <img class="event-img {{ i }}" src="{{ event['images'][8]['url'] }}" />
-      <p>Date: {{ event.dates.start.localDate }}</p>
-      <p>Location: {{ event._embedded.venues[0].city.name }}</p>
-      <a href="{{ event['url'] }}">Book Event</a>
-      <div class="button-container">
-        <button
-          class="favorites"
-          (click)="
-            this.__TicketmasterApiService.addFavorites(event); deleteFamily(i)
-          "
-        >
-          <i class="fas fa-thumbs-up"></i>
-        </button>
-        <button class="favorites" (click)="deleteFamily(i)">
-          <i class="fas fa-thumbs-down"></i>
-        </button>
-      </div>
-    </div>
-  </section>
-</div> -->
-<!-- getFamily Events -->
