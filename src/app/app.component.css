@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:300,400,500,600,700&display=swap');
 
 html {
   background-color: #f9f9f9;
@@ -12,7 +12,7 @@ a {
   text-decoration: none;
   color: #1E1E23;
   opacity: 1;
-  font-family: 'Roboto', sans-serif;  
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
   font-size: 1.5em;
   font-weight: 400;
   transition: 200ms;
@@ -210,7 +210,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    bottom: 18px;
+    bottom: 8px;
     color: #F5F6FA;
   }
 

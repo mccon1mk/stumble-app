@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:300,400,500,600,700&display=swap');
 
 a {
   text-decoration: none;
@@ -19,7 +20,7 @@ html {
   margin-left: calc(15 * 2px);
   background-color: #6b5ca5;
   right: 195px;
-  top: 90px;
+  top: 40px;
 }
 
 a:hover {
@@ -27,10 +28,11 @@ a:hover {
 }
 
 .book-event {
-  border: solid black 1px;
-  background-color: #8d8d92;
+  border: solid #36413e;
+  background-color: #36413e;
   border-radius: 2px;
   margin-bottom: 3px;
+  margin-top: 10px;
 }
 
 .cards-container {
@@ -38,7 +40,7 @@ a:hover {
 }
 
 .card {
-  width: 350px;
+  width: 275px;
   height: 500px;
   background: #F5F6FA;
   border: 1px solid black;
