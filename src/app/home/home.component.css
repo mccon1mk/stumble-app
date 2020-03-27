@@ -3,7 +3,7 @@
 
 a {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   color: #f5f6fa;
 }
 
@@ -12,7 +12,7 @@ html {
   background: #8d8d92;
   width: 100vw;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
 }
 
 .category-div {
@@ -40,7 +40,7 @@ a:hover {
 }
 
 .card {
-  width: 275px;
+  width: 300px;
   height: 500px;
   background: #F5F6FA;
   border: 1px solid black;
@@ -80,7 +80,7 @@ a:hover {
 
 a {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   color: F5F6FA;
 }
 
@@ -153,7 +153,7 @@ html {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;  
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   text-align: center;
   padding: 0px;
   line-height: 1.7;
@@ -179,7 +179,7 @@ color: white;
 }
 
 #search-bar-container {
-  font-family: 'Roboto', sans-serif;  
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;

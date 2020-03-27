@@ -12,7 +12,7 @@ a {
   text-decoration: none;
   color: #1E1E23;
   opacity: 1;
-  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   font-size: 1.5em;
   font-weight: 400;
   transition: 200ms;
@@ -210,7 +210,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    bottom: 8px;
+    bottom: 17px;
     color: #F5F6FA;
   }
 

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
-  font-family: 'Encode Sans Semi Expanded', sans-serif;  
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   margin: 0;
 }
 
@@ -17,7 +17,7 @@ body {
 }
 
 html {
-  font-family: 'Encode Sans Semi Expanded', sans-serif;  
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   background: #5d5e60;
   animation-name: appBackground;
   animation-duration: 15s;

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="event-data card" *ngFor="let fav of favs; let i = index">
-    <p>Event: {{ fav["name"] }}</p>
+    <p>{{ fav["name"] }}</p>
     <img class="event-img" src="{{ fav['image'] }}" />
     <p>Date: {{ fav["localDate"] }}</p>
     <p>Location: {{ fav["city"] }}</p>
