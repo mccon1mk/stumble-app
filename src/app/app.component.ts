@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
 import { TicketmasterApiService } from './ticketmaster-api.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  eventText = '';
+
+  onSwipe(evt) {
+      const x = Math.abs(evt.deltaX) > 40 ? (evt.deltaX > 0 ? 'right' : 'left'):'';
+      const y = Math.abs(evt.deltaY) > 40 ? (evt.deltaY > 0 ? 'down' : 'up') : '';
+
+      this.eventText += `${x} ${y}<br/>`;
+  }
   public sportsEvents;
   public familyEvents;
   public musicEvents;
@@ -16,7 +25,7 @@ export class AppComponent {
 
 
   constructor(private __TicketmasterApiService: TicketmasterApiService) { }
-
+  
 
   ngOnInit() {
 

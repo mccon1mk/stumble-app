@@ -6,7 +6,7 @@
     <p>Location: {{ fav["city"] }}</p>
     <button class="book-event">
     <a href="{{ fav['url'] }}">Book Event</a> </button>
-    <button class="remove" (click)="removeEvent(i)">
+    <button class="remove" (click)="removeEvent(fav,i)">
       <i class="fas fa-times"></i>
     </button>
   </div>

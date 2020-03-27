@@ -26,7 +26,7 @@ export class TicketmasterApiService {
   public cate;
   public city;
   public baseUrl = "https://app.ticketmaster.com/discovery/v2/events.json";
-  public expUrl = "http://localhost:3000";
+  public expUrl = "http://localhost:3000/";
 
   getSports(textSearch = "detroit"): Observable<any> {
     this.city = textSearch;
@@ -52,21 +52,34 @@ export class TicketmasterApiService {
     return this.http.get<any>(artUrl);
   }
 
+
+
   addFavorites(event) {
     const item = {
-      name: event.name,
-      url: event.url,
-      image: event["images"][8]["url"],
-      localDate: event.dates.start.localDate,
-      city: event._embedded.venues[0].city.name
-    };
-    console.log(event);
-    this._favorites.push(event);
-    console.log("Service Favorite Count: " + this._favorites.length);
-    return this.http
-      .post(this.expUrl, item)
-      .subscribe(data => console.log(data));
+      "name": event.name,
+      "url": event.url,
+      "image": event['images'][8]['url'],
+      "localDate": event.dates.start.localDate.toString(),
+      "city": event._embedded.venues[0].city.name
+    }
+  
+    return this.http.post(this.expUrl, item).subscribe(data => console.log(data)) 
   }
+  // addFavorites(event) {
+  //   const item = {
+  //     name: event.name,
+  //     url: event.url,
+  //     image: event["images"][8]["url"],
+  //     localDate: event.dates.start.localDate,
+  //     city: event._embedded.venues[0].city.name
+  //   };
+  //   console.log(event);
+  //   this._favorites.push(event);
+  //   console.log("Service Favorite Count: " + this._favorites.length);
+  //   return this.http
+  //     .post(this.expUrl, item)
+  //     .subscribe(data => console.log(data));
+  // }
 
   getFavorites() {
     return this.http.get(this.expUrl);
@@ -85,4 +98,14 @@ export class TicketmasterApiService {
     let url = `${this.baseUrl}?apikey=${credentials.apiKey}&keyword=${this.cate}&stateCode=MI`;
     return this.http.get<any>(url);
   }
+
+  removeEvent(fav): Observable<any> {
+    const item = {
+      id: fav._id
+    }
+    return this.http
+      .delete(this.expUrl + item.id)
+  }
+
 }
+
