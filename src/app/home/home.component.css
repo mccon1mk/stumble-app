@@ -15,7 +15,7 @@ html {
 
 .category-div {
   position: relative;
-  margin-left: calc(15 * 2px);
+  margin-left: calc(5 * 2px);
   background-color: #6b5ca5;
   right: 195px;
   top: 90px;
@@ -39,8 +39,8 @@ a:hover {
 }
 
 .card {
-  width: 350px;
-  height: 500px;
+  width: 300px;
+  height: 450px;
   background: #f5f6fa;
   border: 1px solid black;
   border-radius: 20px;
@@ -209,6 +209,49 @@ p {
 }
 
 @media only screen and (min-width: 1000px) {
+  .search-bar {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .search-btn {
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid #6b5ca5;
+    background-color: #6b5ca5;
+    color: #f5f6fa;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 350px;
+    height: 500px;
+  }
+
+  .search-bar {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .search-btn {
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid #6b5ca5;
+    background-color: #6b5ca5;
+    color: #f5f6fa;
+  }
+}
+
+@media only screen and (min-width: 425px) {
   .search-bar {
     width: 300px;
     margin: 10px;
