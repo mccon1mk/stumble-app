@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:300,400,500,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:300,400,500,600,700&display=swap");
 
 a {
   text-decoration: none;
   font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
   color: #f5f6fa;
 }
-
 
 html {
   background: #8d8d92;
@@ -42,7 +41,7 @@ a:hover {
 .card {
   width: 300px;
   height: 500px;
-  background: #F5F6FA;
+  background: #f5f6fa;
   border: 1px solid black;
   border-radius: 20px;
   overflow: hidden;
@@ -54,7 +53,6 @@ a:hover {
   position: absolute;
   background-color: #f5f6fa;
 }
-
 
 .search-bar {
   width: 50%;
@@ -70,7 +68,7 @@ a:hover {
   border-radius: 5px;
   border: solid #6b5ca5;
   background-color: #6b5ca5;
-  color: #F5F6FA;
+  color: #f5f6fa;
 }
 
 .search-btn:hover {
@@ -157,8 +155,8 @@ p {
   text-align: center;
   padding: 0px;
   line-height: 1.7;
-margin: 10px;
-color: white;
+  margin: 10px;
+  color: white;
 }
 
 @keyframes searchbackground {
@@ -216,7 +214,7 @@ color: white;
     padding: 10px;
     border-radius: 5px;
   }
-  
+
   .search-btn {
     width: 150px;
     margin: 10px;
@@ -224,7 +222,6 @@ color: white;
     border-radius: 5px;
     border: solid #6b5ca5;
     background-color: #6b5ca5;
-    color: #F5F6FA;
+    color: #f5f6fa;
   }
 }
-
