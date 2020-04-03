@@ -155,8 +155,10 @@ p {
   text-align: center;
   padding: 0px;
   line-height: 1.7;
-  margin: 10px;
+  margin: 5px;
   color: white;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 @keyframes searchbackground {
@@ -206,6 +208,10 @@ p {
   cursor: pointer;
   user-select: none;
 }
+
+/* .cards-container.ng-star-inserted {
+  left: 350px !important;
+} */
 
 @media only screen and (min-width: 1000px) {
   .search-bar {
