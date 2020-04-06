@@ -188,7 +188,7 @@ html {
   margin: 20px;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 768px) {
   .mat-tab-body-content {
     transition: height 500ms cubic-bezier(0.35, 0, 0.25, 1);
     width: 100vw;
@@ -203,7 +203,7 @@ html {
     cursor: pointer;
     box-sizing: border-box;
     opacity: 0.6;
-    min-width: 215px;
+    max-width: 40px !important;
     text-align: center;
     display: inline-flex;
     justify-content: center;
@@ -215,6 +215,9 @@ html {
   .mat-tab-group.mat-primary .mat-ink-bar,
   .mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background-color: #673ab7;
+    visibility: visible;
+    left: 60px;
+
   }
 
   .mat-ink-bar {
@@ -223,7 +226,7 @@ html {
     height: 2px;
     transition: 500ms cubic-bezier(0.35, 0, 0.25, 1);
     visibility: visible;
-    /* max-width: 150px !important; */
+    min-width: 20px !important;
   }
 
   .mat-tab-body.mat-tab-body-active {
