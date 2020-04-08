@@ -1,11 +1,13 @@
-<section>
-  <div>
-    <div class="event-data" *ngFor="let fav of favs">
-      <p>Event: {{fav['name']}}</p>
-      <img class="event-img" src="{{fav['image']}}">
-      <p>Date: {{fav['localDate']}}</p>
-      <p>Location: {{fav['city']}}</p>
-      <a href="{{fav['url']}}">Book Event</a><br>
-    </div>
+<div class="container">
+  <div class="event-data card" *ngFor="let fav of favs; let i = index">
+    <p>{{ fav["name"] }}</p>
+    <img class="event-img" src="{{ fav['image'] }}" />
+    <p>Date: {{ fav["localDate"] }}</p>
+    <p>Location: {{ fav["city"] }}</p>
+    <button class="book-event">
+    <a href="{{ fav['url'] }}">Book Event</a> </button>
+    <button class="remove" (click)="removeEvent(fav,i)">
+      <i class="fas fa-times"></i>
+    </button>
   </div>
-</section>
+</div>

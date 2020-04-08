@@ -1,22 +1,88 @@
-.event-cards {
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|News+Cycle:700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:300,400,500,600,700&display=swap');
+
+a {
+  text-decoration: none;
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  color: #f5f6fa;
+}
+
+.book-event {
+  border: solid #36413e;
+  background-color: #36413e;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  margin-top: 10px;
+}
+.card {
+  background-color: #6b5ca5;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: #F5F6FA;
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
   display: flex;
-  margin: 5%;
   flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .event-data {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+  padding: 2px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5px;
-  padding: 5px;
 }
 
 .event-img {
-  border-radius: 10%;
-  max-width: 50%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  top: 40px;
+  left: 40px;
+  background-color: #f5f6fa;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.fas {
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+.remove {
+  border-radius: 2px;
+  border-color: #36413e;
+  background-color: #ca2b26;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  left: 275px;
+  bottom: 450px;
+}
+
+
+p {
+  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  text-align: center;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
