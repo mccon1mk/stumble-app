@@ -1,6 +1,9 @@
-/* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
 @import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:300,400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+/* * {
+  overflow: hidden;
+} */
 
 body {
   font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
@@ -23,14 +26,16 @@ html {
   animation-name: appBackground;
   animation-duration: 15s;
   animation-iteration-count: infinite;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
 }
 
 .mat-tab-body-wrapper {
-  width: 90vw;
-  height: 90vh;
+  /* width: 90vw;
+  height: 90vh; */
   margin: 0px !important;
+  width: 100%;
+  height: 700px;
 }
 
 /* Tabbed Nav */
@@ -38,8 +43,8 @@ html {
 .mat-tab-group {
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
 }
 
 .mat-tab-header {
@@ -90,7 +95,6 @@ html {
 }
 
 .mat-ripple {
-  /* overflow: hidden; */
   position: relative;
 }
 
@@ -113,16 +117,10 @@ html {
 
 .mat-tab-label-container {
   display: flex;
-  /* flex-grow: 1; */
-  /* overflow: hidden; */
-  z-index: 1;
 }
 
 .mat-tab-list {
-  flex-grow: 1;
   position: relative;
-  transition: transform 500ms cubic-bezier(0.35, 0, 0.25, 1);
-  transform: translateX(0px);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -134,17 +132,15 @@ html {
   justify-content: center;
 }
 
-.mat-ripple:not(:empty) {
-  transform: translateZ(0);
-}
+
 
 .mat-tab-label {
-  height: 60px;
-  padding: 0 24px;
+  height: 20px;
+  padding: 0px;
   cursor: pointer;
   box-sizing: border-box;
   opacity: 0.6;
-  min-width: 275px;
+  min-width: 10px;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -183,16 +179,26 @@ html {
 }
 
 .mat-tab-body-wrapper {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   margin: 20px;
 }
 
-@media only screen and (min-width: 768px) {
+.mat-tab-body.mat-tab-body-active {
+  position: relative;
+  /* overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  flex-grow: 1; */
+}
+
+
+@media only screen and (min-width: 420px) {
   .mat-tab-body-content {
     transition: height 500ms cubic-bezier(0.35, 0, 0.25, 1);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 500px !important;
+    overflow: hidden;
     display: flex;
     justify-content: center;
   }
@@ -215,7 +221,7 @@ html {
   .mat-tab-group.mat-primary .mat-ink-bar,
   .mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background-color: #673ab7;
-    visibility: visible;
+    visibility: hidden;
     left: 60px;
 
   }
@@ -224,28 +230,15 @@ html {
     position: absolute;
     bottom: 0;
     height: 2px;
-    transition: 500ms cubic-bezier(0.35, 0, 0.25, 1);
+    transition: 200ms cubic-bezier(0.35, 0, 0.25, 1);
     visibility: visible;
-    min-width: 20px !important;
+    min-width: 5px !important;
   }
 
-  .mat-tab-body.mat-tab-body-active {
+
+  mat-tab-body.mat-tab-body-active {
     position: relative;
-    /* overflow-x: hidden;
-  overflow-y: auto; */
-    z-index: 1;
-    /* flex-grow: 1; */
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100vh !important;
   }
-}
-
-.mat-tab-body.mat-tab-body-active {
-  position: relative;
-  /* overflow-x: hidden;
-  overflow-y: auto; */
-  z-index: 1;
-  /* flex-grow: 1; */
-  width: 100vw;
-  height: 100vh;
 }

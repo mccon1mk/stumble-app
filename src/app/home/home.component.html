@@ -1,11 +1,8 @@
 <!-- Search Input Field  -->
 <section id="search-bar-container">
-  <input
-    [(ngModel)]="textSearch"
-    type="text"
-    placeholder="Type in city here"
-    class="search-bar"
-  />
+  <p>Search events by city below and click the thumbs up icon to save to your personal bucket list.</p>
+  <p>Not interested in the event? Click the thumbs down and we will remember not to show this event again!</p>
+  <input [(ngModel)]="textSearch" type="text" placeholder="Type in city here" class="search-bar" />
   <button class="search-btn" (click)="onSearch(textSearch)">Submit</button>
 </section>
 
@@ -17,29 +14,27 @@
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
       Sports
     </ng-template>
-    <!-- STACK ONE HTML GOES HERE -->
     <div class="decks-container">
-      <div class="category-div">
-        <section class="cards-container" [ngStyle]="{top: i * -5 + 'px', left: i * -5 + 'px'}" *ngFor="let event of sportsEvents; let i = index">
-          <div class="event-data card" *ngIf="i < 5">
-            <p>{{ event["name"] }}</p>
-            <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
-            <p>Location: {{ event._embedded.venues[0].city.name }}</p>
-            <p>Date: {{ event.dates.start.localDate }}</p>
-            <button class="book-event">
-              <a href="{{ event['url'] }}">Book Event</a>
+      <section class="cards-container" [ngStyle]="{top: i * -5 + 'px', left: i * -5 + 'px'}"
+        *ngFor="let event of sportsEvents; let i = index">
+        <div class="event-data card" *ngIf="i < 5">
+          <p>{{ event["name"] }}</p>
+          <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
+          <p>Location: {{ event._embedded.venues[0].city.name }}</p>
+          <p>Date: {{ event.dates.start.localDate }}</p>
+          <button class="book-event">
+            <a href="{{ event['url'] }}">Book Event</a>
+          </button>
+          <span id="thumbs-section">
+            <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event); deleteSports(i)">
+              <i class="fas fa-thumbs-up"></i>
             </button>
-            <span id="thumbs-section">
-              <button class="favorites" (click)="this.__TicketmasterApiService.addFavorites(event); deleteSports(i)">
-                <i class="fas fa-thumbs-up"></i>
-              </button>
-              <button class="favorites" (click)="deleteSports(i)">
-                <i class="fas fa-thumbs-down"></i>
-              </button>
-            </span>
-          </div>
-        </section>
-      </div>
+            <button class="favorites" (click)="deleteSports(i)">
+              <i class="fas fa-thumbs-down"></i>
+            </button>
+          </span>
+        </div>
+      </section>
     </div>
   </mat-tab>
 
@@ -49,15 +44,11 @@
       Music
     </ng-template>
 
-    <div class="category-div">
-      <section
-        class="cards-container"
-        [ngStyle]="{
+    <div class="decks-container">
+      <section class="cards-container" [ngStyle]="{
           top: i * -5 + 'px',
           left: i * -5 + 'px'
-        }"
-        *ngFor="let event of musicEvents; let i = index"
-      >
+        }" *ngFor="let event of musicEvents; let i = index">
         <div class="event-data card" *ngIf="i < 5">
           <p>{{ event["name"] }}</p>
           <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
@@ -66,22 +57,17 @@
           <button class="book-event">
             <a href="{{ event['url'] }}">Book Event</a>
           </button>
-          <span id="thumbs-section"
-            ><button
-              class="favorites"
-              (click)="
+          <span id="thumbs-section"><button class="favorites" (click)="
                 this.__TicketmasterApiService.addFavorites(event); deleteMusic(i)
-              "
-            >
+              ">
               <i class="fas fa-thumbs-up"></i>
             </button>
             <button class="favorites" (click)="deleteMusic(i)">
-              <i class="fas fa-thumbs-down"></i></button
-          ></span>
+              <i class="fas fa-thumbs-down"></i></button></span>
         </div>
       </section>
     </div>
-  
+
 
   </mat-tab>
 
@@ -92,15 +78,11 @@
     </ng-template>
 
 
-    <div class="category-div">
-      <section
-        class="cards-container"
-        [ngStyle]="{
+    <div class="decks-container">
+      <section class="cards-container" [ngStyle]="{
           top: i * -5 + 'px',
           left: i * -5 + 'px'
-        }"
-        *ngFor="let event of artEvents; let i = index"
-      >
+        }" *ngFor="let event of artEvents; let i = index">
         <div class="event-data card" *ngIf="i < 5">
           <p>{{ event["name"] }}</p>
           <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
@@ -109,62 +91,46 @@
           <button class="book-event">
             <a href="{{ event['url'] }}">Book Event</a>
           </button>
-          <span id="thumbs-section"
-            ><button
-              class="favorites"
-              (click)="
+          <span id="thumbs-section"><button class="favorites" (click)="
                 this.__TicketmasterApiService.addFavorites(event); deleteArt(i)
-              "
-            >
+              ">
               <i class="fas fa-thumbs-up"></i>
             </button>
             <button class="favorites" (click)="deleteArt(i)">
-              <i class="fas fa-thumbs-down"></i></button
-          ></span>
+              <i class="fas fa-thumbs-down"></i></button></span>
         </div>
       </section>
-    </div> 
+    </div>
   </mat-tab>
 
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-Family    
-</ng-template>
+      Family
+    </ng-template>
 
 
-<div class="category-div">
-  <section
-    class="cards-container"
-    [ngStyle]="{
-      top: i * -5 + 'px',
-      left: i * -5 + 'px'
-    }"
-    *ngFor="let event of familyEvents; let i = index"
-  >
-    <div class="event-data card" *ngIf="i < 5">
-      <p>{{ event["name"] }}</p>
-      <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
-      <p>Location: {{ event._embedded.venues[0].city.name }}</p>
-      <p>Date: {{ event.dates.start.localDate }}</p>
-      <button class="book-event">
-        <a href="{{ event['url'] }}">Book Event</a>
-      </button>
-      <span id="thumbs-section"
-        ><button
-          class="favorites"
-          (click)="
+    <div class="decks-container">
+      <section class="cards-container" [ngStyle]="{top: i * -5 + 'px', left: i * -5 + 'px' }"
+        *ngFor="let event of familyEvents; let i = index">
+        <div class="event-data card" *ngIf="i < 5">
+          <p>{{ event["name"] }}</p>
+          <img class="event-img {{ i }}" src="{{ event['images'][1]['url'] }}" />
+          <p>Location: {{ event._embedded.venues[0].city.name }}</p>
+          <p>Date: {{ event.dates.start.localDate }}</p>
+          <button class="book-event">
+            <a href="{{ event['url'] }}">Book Event</a>
+          </button>
+          <span id="thumbs-section"><button class="favorites" (click)="
             this.__TicketmasterApiService.addFavorites(event); deleteFamily(i)
-          "
-        >
-          <i class="fas fa-thumbs-up"></i>
-        </button>
-        <button class="favorites" (click)="deleteFamily(i)">
-          <i class="fas fa-thumbs-down"></i></button
-      ></span>
+          ">
+              <i class="fas fa-thumbs-up"></i>
+            </button>
+            <button class="favorites" (click)="deleteFamily(i)">
+              <i class="fas fa-thumbs-down"></i></button></span>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
   </mat-tab>
-  
+
 </mat-tab-group>
