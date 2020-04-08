@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { TicketmasterApiService } from "../ticketmaster-api.service";
+import { PopUpComponent } from "../pop-up/pop-up.component";
 
 
 @Component({
@@ -9,7 +10,7 @@ import { TicketmasterApiService } from "../ticketmaster-api.service";
 })
 export class HomeComponent implements OnInit {
 
-  
+
 
 
   sportsEvents;
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
   artEvents;
   public textSearch;
 
-  constructor(public __TicketmasterApiService: TicketmasterApiService) {}
+  constructor(public __TicketmasterApiService: TicketmasterApiService) { }
 
   ngOnInit() {
     this.__TicketmasterApiService
@@ -91,5 +92,5 @@ export class HomeComponent implements OnInit {
   deleteArt(event) {
     this.artEvents.splice(event, 1);
   }
-  
+
 }
