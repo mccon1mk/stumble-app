@@ -1,14 +1,48 @@
+<!-- Pop Up Modal -->
+<span id="pop-up-section">
+  <button class="arrow-button" [disabled]="popUpOpen" (click)="openPopUp()">&#x25b6; Click here for more
+    info!</button>
+</span>
+<app-pop-up class="my-prompt" [isOpen]="popUpOpen">
+  <div class="box">
+
+    <span class="title"> WELCOME TO STUMBLE!</span>
+    <br>
+    <main>
+      <ul>
+        <li>
+          Search events by city by entering the desired city in the text box and click go.
+        </li>
+        <li>
+          Interested but not just yet? Click the thumps up icon to add to your bucket list to store and come back to!
+        </li>
+        <li>
+          Not interested? Click thumbs down and we won't show events like these again.
+
+        </li>
+      </ul>
+
+    </main>
+
+    <button (click)="cancelOption()">OK</button>
+
+  </div>
+</app-pop-up>
+
+<!-- Pop Up Modal -->
+
+
 <!-- Search Input Field  -->
 <section id="search-bar-container">
-  <p>Welcome to Stumble!</p>
   <input [(ngModel)]="textSearch" type="text" placeholder="Type in city here" class="search-bar" />
-  <button class="search-btn" (click)="onSearch(textSearch)">Submit</button>
+  <button class="search-btn" (click)="onSearch(textSearch)">Go!</button>
 </section>
+<!-- Search Input Field  -->
 
 
 
-<br />
 
+<!-- Sports Events Deck -->
 <mat-tab-group>
   <mat-tab>
     <ng-template mat-tab-label>
@@ -38,7 +72,10 @@
       </section>
     </div>
   </mat-tab>
+  <!-- Sports Events Deck -->
 
+
+  <!-- Music Events Deck -->
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
@@ -68,17 +105,16 @@
         </div>
       </section>
     </div>
-
-
   </mat-tab>
+  <!-- Music Events Deck -->
 
+
+  <!-- Art Events Deck -->
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
       Art & Theater
     </ng-template>
-
-
     <div class="decks-container">
       <section class="cards-container" [ngStyle]="{
           top: i * -5 + 'px',
@@ -103,14 +139,16 @@
       </section>
     </div>
   </mat-tab>
+  <!-- Art Events Deck -->
 
+
+
+  <!-- Family Events Deck -->
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="example-tab-icon">thumb_up</mat-icon>
       Family
     </ng-template>
-
-
     <div class="decks-container">
       <section class="cards-container" [ngStyle]="{top: i * -5 + 'px', left: i * -5 + 'px' }"
         *ngFor="let event of familyEvents; let i = index">
@@ -133,5 +171,5 @@
       </section>
     </div>
   </mat-tab>
-
 </mat-tab-group>
+<!-- Family Events Deck -->

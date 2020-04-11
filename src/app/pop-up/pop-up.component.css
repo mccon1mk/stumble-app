@@ -1,34 +1,50 @@
 .shade {
-z-index: 1000;
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-top: 0;
-background: transparent;
-}  
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: transparent;
+}
 
 .pop-up {
-z-index: 1001;
-display: flex;
-flex-direction: column;
-justify-content: center;
-box-sizing: border-box;
-position: fixed;
-left: 0;
-right: 0;
-top: 0;
-padding: 1ch;
-height: 100vh;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  right: 30px;
+  top: 0;
+  padding: 1ch;
+  height: 100vh;
+  align-items: center;
 }
 
 .pop-up-box {
-overflow-y: auto;
-max-height: 100vh;
-margin: 0 auto;
-width: auto;
-padding: 1rem;
-box-shadow: 6px 6px 0 #000000;
-color: #36413e;
-background-color: #6b5ca5;
+  overflow-y: auto;
+  max-height: 100vh;
+  margin: 0 auto;
+  width: auto;
+  padding: 1rem;
+  box-shadow: 6px 6px 0 #000000;
+  color: black;
+  background-color: #6b5ca5;
+  border: 2px solid #36413e;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 30px;
+  max-width: 100vw;
+}
+
+p {
+  text-align: center;
+  margin: 3px;
+}
+
+.arrow-button {
+  width: 30px;
+  height: 25px;
 }

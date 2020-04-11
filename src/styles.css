@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:300,400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;800&display=swap');
 
 /* * {
   overflow: hidden;
 } */
 
 body {
-  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  /* font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif; */
+  font-family: 'Playfair Display', serif;
   margin: 0;
 }
 
@@ -21,18 +23,15 @@ body {
 }
 
 html {
-  font-family: "News Cycle", "Encode Sans Semi Expanded", sans-serif;
+  font-family: 'Playfair Display',
+    serif;
   background: #5d5e60;
   animation-name: appBackground;
   animation-duration: 15s;
   animation-iteration-count: infinite;
-  /* width: 100vw;
-  height: 100vh; */
 }
 
 .mat-tab-body-wrapper {
-  /* width: 90vw;
-  height: 90vh; */
   margin: 0px !important;
   width: 100%;
   height: 700px;
@@ -59,48 +58,10 @@ html {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-.mat-ripple:not(:empty) {
-  transform: translateZ(0);
-}
 
 .mat-tab-header-pagination-disabled {
   box-shadow: none;
   cursor: default;
-}
-
-.mat-tab-header-pagination-before,
-.mat-tab-header-rtl .mat-tab-header-pagination-after {
-  padding-left: 4px;
-}
-
-.mat-tab-header-pagination {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  min-width: 32px;
-  cursor: pointer;
-  z-index: 2;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: none;
-}
-
-.mat-elevation-z4 {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-}
-
-.mat-ripple {
-  position: relative;
-}
-
-.mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,
-.mat-tab-header-rtl .mat-tab-header-pagination-after .mat-tab-header-pagination-chevron {
-  transform: rotate(-135deg);
 }
 
 .mat-tab-header-pagination-disabled .mat-tab-header-pagination-chevron {
@@ -193,7 +154,7 @@ html {
 }
 
 
-@media only screen and (min-width: 420px) {
+@media only screen and (min-width: 766px) {
   .mat-tab-body-content {
     transition: height 500ms cubic-bezier(0.35, 0, 0.25, 1);
     width: 100%;

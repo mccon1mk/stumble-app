@@ -1,12 +1,18 @@
 import { Component, OnInit } from "@angular/core";
 import { TicketmasterApiService } from "../ticketmaster-api.service";
 import { PopUpComponent } from "../pop-up/pop-up.component";
+import { openCloseAnimation, openCloseShadeAnimation } from '../pop-up/animations';
+
 
 
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"]
+  styleUrls: ["./home.component.css"],
+  animations: [
+    openCloseAnimation,
+    openCloseShadeAnimation,
+  ]
 })
 export class HomeComponent implements OnInit {
 
@@ -20,7 +26,16 @@ export class HomeComponent implements OnInit {
   public textSearch;
 
   constructor(public __TicketmasterApiService: TicketmasterApiService) { }
+  popUpOpen = false;
 
+
+  openPopUp() {
+    this.popUpOpen = true;
+  }
+
+  cancelOption() {
+    this.popUpOpen = false;
+  }
   ngOnInit() {
     this.__TicketmasterApiService
       .getSports()
@@ -92,5 +107,8 @@ export class HomeComponent implements OnInit {
   deleteArt(event) {
     this.artEvents.splice(event, 1);
   }
+
+
+
 
 }
